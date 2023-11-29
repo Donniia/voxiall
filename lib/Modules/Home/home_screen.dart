@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                 SliderPost(username: "thv", profilepath: "assets/images/V_profile.png",  path1: "assets/images/V_post.png", path2: "assets/images/V_post.png"),
                 Post(username: "Tony Montana", profilepath: "assets/images/Profile5.png", post: "Writing code is not so bad!"),
                 PhotoPost(username:"Jessica Thompson" , profilepath: "assets/images/Profile3.png", path1:"assets/images/post1.png",),
-                PhotoPost(username:"Dustin Grant" , profilepath: "assets/images/Profile6.png", path1:"assets/images/post2.png",),
+                PhotoPost(username:"Dustin Grant" , profilepath: "assets/images/Profile6.png", path1:"assets/images/postphoto2.png",),
 
               ],
             );
