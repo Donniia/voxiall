@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 class PostHeader extends StatelessWidget {
   String title;
   String imgPath;
-  String timer;
   PostHeader({
     super.key,
     required this.title,
     required this.imgPath,
-    required this.timer,
   });
 
   @override
@@ -38,7 +36,7 @@ class PostHeader extends StatelessWidget {
                   fontWeight: FontWeight.w500),
             ),
             Text(
-              timer,
+              "1h ago",
               style: TextStyle(
                   color: Color(0xff727477),
                   fontSize: 15,

@@ -6,11 +6,10 @@ import 'package:voxiall/Modules/widgets/post_header.dart';
 class SliderPost extends StatelessWidget {
   String username;
   String profilepath;
-  String time;
   String path1;
   String path2;
 
-   SliderPost({required this.username,required this.profilepath,required this.time,required this.path1,required this.path2});
+   SliderPost({required this.username,required this.profilepath,required this.path1,required this.path2});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class SliderPost extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          PostHeader(title: username, imgPath: profilepath, timer: time),
+          PostHeader(title: username, imgPath: profilepath,),
           Container(
             height: 250,
             child: PageView(
@@ -30,8 +29,7 @@ class SliderPost extends StatelessWidget {
             ),
           ),
           PostFooter(),
-          SizedBox(height: 10,),
-          Divider(thickness: 2,color: Color(0xff323436),)
+
         ],
       ),
     );

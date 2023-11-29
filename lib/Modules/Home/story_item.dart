@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StoryItem extends StatelessWidget {
-  const StoryItem({super.key});
-
+ String storyprofile;
+ String story;
+ StoryItem({required this.storyprofile,required this.story});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,8 +15,9 @@ class StoryItem extends StatelessWidget {
         children: [
           ClipRRect(
             child: Image.asset(
-              "assets/images/Story1.png",
+              story,
               fit: BoxFit.cover,
+
             ),
           ),
           Container(
@@ -33,7 +35,7 @@ class StoryItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                   border: Border.all(color: Color(0xff323436), width: 4)),
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/images/Profile_Photo.png"),
+                backgroundImage: AssetImage(storyprofile),
               ),
             ),
           )

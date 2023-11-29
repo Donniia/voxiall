@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Tab_Item extends StatelessWidget {
   String TabTitle;
-   Tab_Item({required this.TabTitle});
+   Tab_Item({required this.TabTitle,});
 
   @override
   Widget build(BuildContext context) {

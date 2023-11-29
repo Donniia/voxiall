@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40,),
+      padding: const EdgeInsets.symmetric(vertical: 40,horizontal: 5),
       child: Expanded(
         child: ListView.builder(
           itemCount: 1,
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                   const Text("Good Morning.",style: TextStyle(
+                   const Text("  Good Morning.",style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.w600,
                         color: Colors.white
@@ -41,16 +41,18 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-               const SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      StoryItem(),
-                      StoryItem(),
-                      StoryItem(),
-                      StoryItem(),
-                      StoryItem(),
-                      StoryItem(),
+                     StoryItem(storyprofile: "assets/images/Profile_Photo.png", story: "assets/images/Story1.png"),
+                     StoryItem(storyprofile: "assets/images/storyprofile1.png", story: "assets/images/Story2.png"),
+                     StoryItem(storyprofile: "assets/images/storyprofile2.png", story: "assets/images/Story3.png"),
+                     StoryItem(storyprofile: "assets/images/storyprofile2.png", story: "assets/images/Story5.png"),
+                     StoryItem(storyprofile: "assets/images/storyprofile2.png", story: "assets/images/Story6.png"),
+                     StoryItem(storyprofile: "assets/images/storyprofile2.png", story: "assets/images/Story7.png"),
+
+
                     ],
                   ),
                 ),
@@ -59,9 +61,9 @@ class HomeScreen extends StatelessWidget {
                   height: 2,
                   thickness: 2,
                 ),
-                const Post(),
-                SliderPost(username: "thv", profilepath: "assets/images/V_profile.png", time: "1h ago", path1: "assets/images/V_post.png", path2: "assets/images/V_post.png")
-
+                 Post(username: "Jacob Washington", profilepath: "assets/images/Profile2.png", post:  "If you think you too small to make \n a difference, try sleeping with a mosquito. \n \n ~ Dalai Lama",),
+                SliderPost(username: "thv", profilepath: "assets/images/V_profile.png",  path1: "assets/images/V_post.png", path2: "assets/images/V_post.png"),
+                Post(username: "Tony Montana", profilepath: "assets/images/Profile2.png", post: "Writing code is not so bad!")
 
               ],
             );
