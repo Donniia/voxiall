@@ -8,16 +8,16 @@ class StoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 130,
-      height: 200,
+      height: 180,
       margin: const EdgeInsets.only(left: 10, bottom: 40),
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
           ClipRRect(
+            borderRadius: BorderRadius.circular(25),
             child: Image.asset(
               story,
               fit: BoxFit.cover,
-
             ),
           ),
           Container(
