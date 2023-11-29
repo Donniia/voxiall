@@ -60,7 +60,8 @@ class HomeScreen extends StatelessWidget {
                   thickness: 2,
                 ),
                 const Post(),
-               const SliderPost(),
+                SliderPost(username: "thv", profilepath: "assets/images/V_profile.png", time: "1h ago", path1: "assets/images/V_post.png", path2: "assets/images/V_post.png")
+
 
               ],
             );

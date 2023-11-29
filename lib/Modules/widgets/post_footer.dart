@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
 
-class PostFooter extends StatelessWidget {
-  const PostFooter({super.key});
+class PostFooter extends StatefulWidget {
+  @override
+  State<PostFooter> createState() => _PostFooterState();
+}
+
+class _PostFooterState extends State<PostFooter> {
+  bool isTabed=false;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            ImageIcon(
-              AssetImage("assets/images/Like_icon.png"),
-              color: Colors.white,
+            GestureDetector(
+              onTap: (){
+               setState(() {
+                 isTabed=true;
+               });
+              },
+              child: ImageIcon(
+                AssetImage("assets/images/Like_icon.png"),
+                color: isTabed ? Color(0xffEB4E2A) :Colors.white,
+              ),
             ),
             SizedBox(
               width: 5,
@@ -27,6 +39,7 @@ class PostFooter extends StatelessWidget {
             )
           ],
         ),
+        const SizedBox(width: 15,),
         Row(
           children: [
             ImageIcon(
@@ -45,6 +58,7 @@ class PostFooter extends StatelessWidget {
             )
           ],
         ),
+        const SizedBox(width: 15,),
         Row(
           children: [
             ImageIcon(
@@ -64,14 +78,12 @@ class PostFooter extends StatelessWidget {
             )
           ],
         ),
-        ShaderMask(
-          shaderCallback: (rect) => LinearGradient(colors: [
-            Color(0xffEB4E2A),
-            Color(0xffF0C11A),
-          ], begin: Alignment.topCenter)
-              .createShader(rect),
-          child: Icon(Icons.bookmark_border),
-        ),
+        Spacer(),
+        Container(
+          child: Image.asset("assets/images/save_icon.png"),
+          height: 25,
+          width: 25,
+        )
       ],
     );
   }
