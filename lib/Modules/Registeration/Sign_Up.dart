@@ -13,6 +13,7 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   TextEditingController passController = TextEditingController();
+  TextEditingController confirmPassController = TextEditingController();
 
   var formKey = GlobalKey<FormState>();
 
@@ -98,7 +99,7 @@ class _SignUpState extends State<SignUp> {
                       if (value == null || value.trim().isEmpty) {
                         return "You must confirm your password";
                       }
-                      if (value != passController.text) {
+                      if (value == passController.text) {
                         return "password doesn't match";
                       }
                     },
