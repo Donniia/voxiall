@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
+import 'package:voxiall/Modules/Post/create_post.dart';
 import 'package:voxiall/Modules/Search/search_screen.dart';
 
 class HomeLayout extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   List<Widget> Screens = [
     HomeScreen(),
     Search_Screen(),
-    HomeScreen(),
+    Create_post(),
     HomeScreen(),
 
   ];
