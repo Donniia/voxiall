@@ -9,7 +9,7 @@ class StoryItem extends StatelessWidget {
     return Container(
       width: 130,
       height: 180,
-      margin: const EdgeInsets.only(left: 10, bottom: 40),
+      margin: const EdgeInsets.only(left: 10, bottom: 40,top: 15),
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [

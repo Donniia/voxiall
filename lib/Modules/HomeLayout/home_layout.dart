@@ -20,7 +20,6 @@ class _HomeLayoutState extends State<HomeLayout> {
     Search_Screen(),
     HomeScreen(),
     HomeScreen(),
-    HomeScreen(),
 
   ];
 
@@ -74,5 +73,13 @@ class _HomeLayoutState extends State<HomeLayout> {
         ),
       ),
     );
+  }
+  void showBottomSheet() {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) => Container(),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25), topRight: Radius.circular(25))));
   }
 }
