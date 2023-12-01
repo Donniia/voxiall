@@ -9,7 +9,7 @@ class Search_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 68,horizontal: 24,
+        vertical: 60,horizontal: 24,
       ),
       child: ListView.builder(
           itemCount: 1,
@@ -17,17 +17,26 @@ class Search_Screen extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              width: 327,
-              height: 44,
+             Container(
+              padding: EdgeInsets.only(left: 15,right: 20),
               decoration: BoxDecoration(
                 color: Color(0xff323436),
-                borderRadius: BorderRadius.circular(25),
-              ),
-
+                  borderRadius: BorderRadius.circular(100)),
               child: Row(
                 children: [
-                  Icon(Icons.search , color: Color(0xff727477),),
+                  Expanded(
+                    child: TextField(
+                      style: TextStyle(
+                        color: Colors.white
+                      ),
+                      decoration: InputDecoration(border: InputBorder.none,
+                          hintText: "Search for people, posts, tags...",
+                          hintStyle: TextStyle(
+                              fontSize: 15,
+                              color:Color(0xffECEBED) )),
+                    ),
+                  ),
+                  Icon(Icons.search,color: Color(0xff727477),)
                 ],
               ),
             ),

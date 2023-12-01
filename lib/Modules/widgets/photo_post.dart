@@ -23,7 +23,7 @@ class PhotoPost extends StatelessWidget {
           Container(
             height: 250,
             child: ClipRRect(
-              child: Image.asset("assets/images/post1.png"),
+              child: Image.asset(path1),
             )
           ),
           PostFooter(),

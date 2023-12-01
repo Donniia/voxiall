@@ -4,6 +4,7 @@ import 'package:voxiall/Modules/widgets/tab_item.dart';
 class custom_tabbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return DefaultTabController(
       length: 7,
       child: TabBar(
