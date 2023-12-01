@@ -21,6 +21,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     Search_Screen(),
     Create_post(),
     HomeScreen(),
+    HomeScreen(),
 
   ];
 
