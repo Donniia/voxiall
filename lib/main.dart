@@ -29,7 +29,7 @@ class MyApplication extends StatelessWidget {
         LogIn.routename:(context)=>LogIn(),
         SignUp.routeName:(context)=>SignUp(),
         HomeLayout.routeName:(context) =>HomeLayout(),
-        Message_screen.routename:(context) =>Message_screen(),
+        Message_screen.routeName:(context) =>Message_screen(),
       },
     );
   }

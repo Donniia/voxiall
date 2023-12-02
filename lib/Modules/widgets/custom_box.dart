@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 class CustomBox extends StatelessWidget {
   String imgPath;
   String title;
-  CustomBox({super.key, required this.title, required this.imgPath});
+
+  CustomBox({Key? key, required this.title, required this.imgPath});
 
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size;
+
     return Container(
-      margin:const EdgeInsets.symmetric(vertical: 15),
-      width: 141,
-      height: 40,
+      margin: EdgeInsets.symmetric(vertical: media.height * 0.015),
+      width: media.width * 0.37,
+      height: media.height * 0.065,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
       ),
@@ -18,18 +21,19 @@ class CustomBox extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 30,
-            height: 30,
+            width: media.width * 0.12,
+            height: media.width * 0.12,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: DecorationImage(image: AssetImage(imgPath))),
+              borderRadius: BorderRadius.circular(25),
+              image: DecorationImage(image: AssetImage(imgPath)),
+            ),
           ),
-         const SizedBox(
-            width: 8,
+          SizedBox(
+            width: media.width * 0.03,
           ),
           Text(
             title,
-            style: const TextStyle(color: Color(0xff727477), fontSize: 17),
+            style: TextStyle(color: Color(0xff727477), fontSize: media.width * 0.047),
           )
         ],
       ),

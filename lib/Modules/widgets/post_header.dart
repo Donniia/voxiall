@@ -11,19 +11,22 @@ class PostHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    var media = MediaQuery.of(context).size;
+
+    return Row(
       children: [
         Container(
-          width: 50,
-          height: 50,
+          width: media.width * 0.133,
+          height: media.width * 0.133,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              image: DecorationImage(
-                image: AssetImage(imgPath),
-              )),
+            borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
+            image: DecorationImage(
+              image: AssetImage(imgPath),
+            ),
+          ),
         ),
         SizedBox(
-          width: 8,
+          width: media.width * 0.0213,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,25 +34,27 @@ class PostHeader extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                  color: Color(0xffECEBED),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500),
+                color: Color(0xffECEBED),
+                fontSize: media.width * 0.048,
+                fontWeight: FontWeight.w500,
+              ),
             ),
             Text(
               "1h ago",
               style: TextStyle(
-                  color: Color(0xff727477),
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500),
-            )
+                color: Color(0xff727477),
+                fontSize: media.width * 0.040,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ],
         ),
         Spacer(),
         Container(
           child: Image.asset("assets/images/Dots_Vertical.png"),
-          height: 30,
-          width: 30,
-        )
+          height: media.width * 0.08,
+          width: media.width * 0.08,
+        ),
       ],
     );
   }

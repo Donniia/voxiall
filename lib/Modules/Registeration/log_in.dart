@@ -21,12 +21,13 @@ class _LogInState extends State<LogIn> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Container(
-      decoration:const BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(
-            image: AssetImage("assets/images/bg.png"),
-            fit: BoxFit.cover,
-          )),
+      decoration: const BoxDecoration(
+        color: Colors.black,
+        image: DecorationImage(
+          image: AssetImage("assets/images/bg.png"),
+          fit: BoxFit.cover,
+        ),
+      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
@@ -38,68 +39,54 @@ class _LogInState extends State<LogIn> {
                 SizedBox(
                   height: media.height * 0.4,
                 ),
-              const  Text(
+                Text(
                   "LogIn",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 30,
-                      color: Colors.white),
+                    fontWeight: FontWeight.w700,
+                    fontSize: media.width < 600 ? 24 : 30,
+                    color: Colors.white,
+                  ),
                 ),
-               const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: media.height < 600 ? 20 : 30,
                 ),
                 CustomTextForm(
-                    // validator: (value) {
-                    //   if (value == null || value.trim().isEmpty) {
-                    //     return "You must enter your email address";
-                    //   }
-                    //   var regex = RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
-                    //   if (!regex.hasMatch(value)) {
-                    //     return "invalid email address";
-                    //   }
-                    // },
-                    labelText: "Email"),
+                  labelText: "Email",
+                ),
                 CustomTextForm(
-                    obsecure: !isvisible,
-                    suffixicon: GestureDetector(
-                      onTap: () {
-                        isvisible = !isvisible;
-                        setState(() {});
-                      },
-                      child: isvisible == true
-                          ? const Icon(
-                              Icons.visibility,
-                              color: Color(0xff727477),
-                            )
-                          :const Icon(
-                              Icons.visibility_off,
-                              color: Color(0xff727477),
-                            ),
-                    ),
-                    // validator: (value) {
-                    //   if (value == null || value.trim().isEmpty) {
-                    //     return "You must enter your Password";
-                    //   }
-                    //   var regex = RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
-                    //   if (regex.hasMatch(value)) {
-                    //     return "invalid Password";
-                    //   }
-                    // },
-                    labelText: "Password"),
-                GestureDetector(
+                  obsecure: !isvisible,
+                  suffixicon: GestureDetector(
                     onTap: () {
-                      if (formkey.currentState!.validate()) {
-                        Navigator.pushNamed(context, HomeLayout.routeName);
-                      }
+                      isvisible = !isvisible;
+                      setState(() {});
                     },
-                    child: CustomButton(
-                      title: "LogIn",
-                    )),
-             const   SizedBox(
-                  height: 20,
+                    child: isvisible == true
+                        ? Icon(
+                      Icons.visibility,
+                      color: Color(0xff727477),
+                    )
+                        : Icon(
+                      Icons.visibility_off,
+                      color: Color(0xff727477),
+                    ),
+                  ),
+                  labelText: "Password",
                 ),
-                const Text(
+                GestureDetector(
+                  onTap: () {
+                    if (formkey.currentState!.validate()) {
+                      Navigator.pushNamed(context, HomeLayout.routeName);
+                    }
+                  },
+                  child: CustomButton(
+                    title: "LogIn",
+                  ),
+                ),
+                SizedBox(
+                  height: media.height < 600 ? 10 : 20,
+                ),
+                Text(
                   "Or continue with",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Color(0xff727477), fontSize: 17),
@@ -107,24 +94,43 @@ class _LogInState extends State<LogIn> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                  CustomBox(title: "Google", imgPath: "assets/images/google.png"),
-                  CustomBox(title: "Facebook", imgPath: "assets/images/facebook.png")
-                ],),
-                const   SizedBox(
-                  height: 20,
+                    CustomBox(
+                      title: "Google",
+                      imgPath: "assets/images/google.png",
+                    ),
+                    CustomBox(
+                      title: "Facebook",
+                      imgPath: "assets/images/facebook.png",
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: media.height < 600 ? 10 : 20,
                 ),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pushReplacementNamed(context, SignUp.routeName);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don't have account?",style: TextStyle(color: Color(0xff727477), fontSize: 17 ),),
-                      Text("Create now",style: TextStyle(color: Colors.white,fontSize: 18),),
+                      Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                          color: Color(0xff727477),
+                          fontSize: media.width < 600 ? 14 : 17,
+                        ),
+                      ),
+                      Text(
+                        " Create now",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: media.width < 600 ? 16 : 18,
+                        ),
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

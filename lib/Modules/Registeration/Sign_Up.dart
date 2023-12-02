@@ -26,9 +26,9 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          decoration:const BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/bg.png",),
+              image: AssetImage("assets/images/bg.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -37,53 +37,56 @@ class _SignUpState extends State<SignUp> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 330),
-                const Text(
+                SizedBox(height: media.height * 0.44),
+                Text(
                   "Register",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    fontSize: 30,
+                    fontSize: media.width < 600 ? 24 : 30,
                     color: Colors.white,
                   ),
                 ),
-              const  SizedBox(height: 20),
+                SizedBox(height: media.height < 600 ? 16 : 20),
                 CustomTextForm(
-                    validator: (value) {
-                  if (value == null || value.trim().isEmpty) {
-                    return "You must enter your full name";
-                  }
-                }
-                    , labelText: "Full Name"),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return "You must enter your full name";
+                    }
+                  },
+                  labelText: "Full Name",
+                ),
                 CustomTextForm(
-                    validator: (value) {
-                  if (value == null || value.trim().isEmpty) {
-                    return "You must enter your email address";
-                  }
-                  var regex = RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
-                  if (!regex.hasMatch(value)) {
-                    return "invalid email address";
-                  }
-                }
-                    , labelText: "Email"),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return "You must enter your email address";
+                    }
+                    var regex = RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
+                    if (!regex.hasMatch(value)) {
+                      return "invalid email address";
+                    }
+                  },
+                  labelText: "Email",
+                ),
                 CustomTextForm(
                   obsecure: !isVisible,
-                    textcontroller: passController,
-                    suffixicon: GestureDetector(
-                      onTap: () {
-                        isVisible = !isVisible;
-                        setState(() {});
-                      },
-                      child: isVisible == true
-                          ? const Icon(Icons.visibility,color:Color(0xff727477),)
-                          : const Icon(Icons.visibility_off,color: Color(0xff727477),),
-                    ),
-                    validator: (value) {
-                  if (value == null || value.trim().isEmpty) {
-                    return "You must enter your password";
-                  }
-                }
-                    , labelText: "Password"),
+                  textcontroller: passController,
+                  suffixicon: GestureDetector(
+                    onTap: () {
+                      isVisible = !isVisible;
+                      setState(() {});
+                    },
+                    child: isVisible == true
+                        ? Icon(Icons.visibility, color: Color(0xff727477))
+                        : Icon(Icons.visibility_off, color: Color(0xff727477)),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return "You must enter your password";
+                    }
+                  },
+                  labelText: "Password",
+                ),
                 CustomTextForm(
                   obsecure: !isVisible,
                   suffixicon: GestureDetector(
@@ -92,38 +95,40 @@ class _SignUpState extends State<SignUp> {
                       setState(() {});
                     },
                     child: isVisible == true
-                        ? const Icon(Icons.visibility,color:Color(0xff727477),)
-                        : const Icon(Icons.visibility_off,color: Color(0xff727477),),
+                        ? Icon(Icons.visibility, color: Color(0xff727477))
+                        : Icon(Icons.visibility_off, color: Color(0xff727477)),
                   ),
-                    validator: (value) {
-                      if (value == null || value.trim().isEmpty) {
-                        return "You must confirm your password";
-                      }
-                      if (value == passController.text) {
-                        return "password doesn't match";
-                      }
-                    },
-                     labelText: "Confirm Password"),
-                CustomTextForm(
-                    validator: (value) {
-                      if (value == null || value.trim().isEmpty) {
-                        return "You must enter your phone number";
-                      }
-                    },
-                     labelText: "Phone Number"),
-               const SizedBox(height: 20),
-                // Sign-Up Button
-             GestureDetector(
-               onTap: (){
-                 if(formKey.currentState!.validate()){
-                   Navigator.pushNamed(context, HomeLayout.routeName);
-                 }
-               },
-                 child: CustomButton(title: "SignUp",)),
-                const  SizedBox(
-                  height:20,
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return "You must confirm your password";
+                    }
+                    if (value == passController.text) {
+                      return "password doesn't match";
+                    }
+                  },
+                  labelText: "Confirm Password",
                 ),
-                const Text(
+                CustomTextForm(
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return "You must enter your phone number";
+                    }
+                  },
+                  labelText: "Phone Number",
+                ),
+                SizedBox(height: media.height < 600 ? 16 : 20),
+                GestureDetector(
+                  onTap: () {
+                    if (formKey.currentState!.validate()) {
+                      Navigator.pushNamed(context, HomeLayout.routeName);
+                    }
+                  },
+                  child: CustomButton(title: "SignUp"),
+                ),
+                SizedBox(
+                  height: media.height < 600 ? 16 : 20,
+                ),
+                Text(
                   "or continue with",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -134,11 +139,16 @@ class _SignUpState extends State<SignUp> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CustomBox(title: "Google", imgPath: "assets/images/google.png",),
-                    CustomBox(title: "Facebook", imgPath: "assets/images/facebook.png",),
+                    CustomBox(
+                      title: "Google",
+                      imgPath: "assets/images/google.png",
+                    ),
+                    CustomBox(
+                      title: "Facebook",
+                      imgPath: "assets/images/facebook.png",
+                    ),
                   ],
                 ),
-                // Already have an account? Link
               ],
             ),
           ),

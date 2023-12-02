@@ -134,7 +134,7 @@ class HomeScreen extends StatelessWidget {
               ),
               PhotoPost(
                 username: "Jessica Thompson",
-                profilepath: "assets/images/Profile3.png",
+                profilepath: "assets/images/Jessica_Thompson1.png",
                 path1: "assets/images/post1.png",
               ),
               PhotoPost(

@@ -10,9 +10,11 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
-   Timer(const Duration(seconds: 3),(){
-     Navigator.pushReplacementNamed(context, LogIn.routename);
-   });
+
+    Timer(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, LogIn.routename);
+    });
+
     return Scaffold(
       body: Image.asset(
         "assets/images/Splash_screen.png",
