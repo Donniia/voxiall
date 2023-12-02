@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
 
 class YourStoryView extends StatelessWidget {
-  LinearGradient colored = LinearGradient(
-      colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
-      begin: Alignment.topCenter,
-      end: Alignment.bottomCenter);
   static final StoryController controller = StoryController();
   String storyprofile;
   String story;
