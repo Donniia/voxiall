@@ -1,9 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/widgets/item_clicked.dart';
 
-class Myprofile extends StatelessWidget {
+class Myprofile extends StatefulWidget {
   const Myprofile({super.key});
-  
 
+  @override
+  State<Myprofile> createState() => _MyprofileState();
+}
+
+class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMixin {
+  late TabController _controller;
+  @override
+  void initState(){
+    _controller = TabController(length: 4, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
+  List<Widget> tabs = [
+    Text("Posts",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+    Text("Stories",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+    Text("Links",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+    Text("Tagged",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+  ];
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -129,38 +152,24 @@ class Myprofile extends StatelessWidget {
             length: 4,
             child: Column(
               children: [
-                Container(
-                  height: 55,
-                  child: TabBar(
-
-                      unselectedLabelColor: Colors.grey,
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      indicatorColor: Color(0xff363F72),
-                      isScrollable: true,
-                      tabs: [
-                        Tab(
-                          text: "Posts",
-                        ),
-                        Tab(
-                          text: "Stories",
-                        ),
-                        Tab(
-                          text: "",
-                        ),
-                        Tab(
-                          text: "Lower",
-                        ),
-                      ]),
-                ),
-                Container(
-                  width: 400,
-                  height: 400,
-                  child: TabBarView(
-                    children: [
-
-                    ],
-                  ),
-                )
+                TabBar(
+                  controller: _controller,
+                    unselectedLabelColor: Colors.grey,
+                    indicatorColor: Color(0xffEB4E2A),
+                    tabs: [
+                      Tab(
+                        text: "Posts",
+                      ),
+                      Tab(
+                        text: "Stories",
+                      ),
+                      Tab(
+                        text: "Liked",
+                      ),
+                      Tab(
+                        text: "Tagged",
+                      ),
+                    ]),
               ],
             ),
           )

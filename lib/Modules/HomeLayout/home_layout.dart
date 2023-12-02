@@ -38,7 +38,7 @@ class _HomeLayoutState extends State<HomeLayout> {
           ),
         ),
         child: BottomNavigationBar(
-          iconSize: media.width < 600 ? 20 : 30,
+          iconSize: 30,
           type: BottomNavigationBarType.fixed,
           enableFeedback: false,
           currentIndex: selectedIndex,

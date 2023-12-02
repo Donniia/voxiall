@@ -10,19 +10,26 @@ class custom_tabbar extends StatelessWidget {
     return DefaultTabController(
       length: 7,
       child: TabBar(
+         indicatorWeight: 0.1,
         isScrollable: true,
-        indicator: BoxDecoration(),
+        indicator: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter),
+              borderRadius: BorderRadius.circular(25)
+        ),
         labelPadding: EdgeInsets.symmetric(
           horizontal: media.width * 0.03,
         ),
         tabs: [
           Tab_Item(tabTitle: "All",),
-          Tab_Item(tabTitle: "Profiles"),
-          Tab_Item(tabTitle: "Photos"),
-          Tab_Item(tabTitle: "Videos"),
-          Tab_Item(tabTitle: "Posts"),
-          Tab_Item(tabTitle: "Links"),
-          Tab_Item(tabTitle: "Tags"),
+          Tab_Item(tabTitle: "Profiles",),
+          Tab_Item(tabTitle: "Photos",),
+          Tab_Item(tabTitle: "Videos",),
+          Tab_Item(tabTitle: "Posts",),
+          Tab_Item(tabTitle: "Links",),
+          Tab_Item(tabTitle: "Tags",),
         ],
       ),
     );

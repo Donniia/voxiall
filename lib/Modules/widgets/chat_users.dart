@@ -36,6 +36,8 @@ class Chat_user extends StatelessWidget {
                 ),
               ],
             ),
+            Spacer(),
+            Text("4h ago",style: TextStyle(color: Color(0xff727477),fontSize: 14),)
           ],
         ),
         SizedBox(

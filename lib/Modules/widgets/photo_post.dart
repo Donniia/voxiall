@@ -20,7 +20,7 @@ class PhotoPost extends StatelessWidget {
         children: [
           PostHeader(title: username, imgPath: profilepath),
           Container(
-            height: media.height * 0.35,
+            height: media.height * 0.28,
             child: ClipRRect(
               child: Image.asset(path1,),
             ),

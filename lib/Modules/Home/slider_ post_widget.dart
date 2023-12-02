@@ -18,7 +18,7 @@ class SliderPost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double containerHeight = screenWidth >= 600 ? 350 : 250;
+    double containerHeight = screenWidth >= 600 ? 320 : 220;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
