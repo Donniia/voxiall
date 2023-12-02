@@ -4,13 +4,26 @@ import 'package:voxiall/Modules/widgets/story_viewer.dart';
 class StoryItem extends StatelessWidget {
   String storyprofile;
   String story;
-  StoryItem({required this.storyprofile, required this.story});
+  String user_name;
+  String time;
+  StoryItem(
+      {required this.storyprofile,
+      required this.story,
+      required this.user_name,
+      required this.time});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => YourStoryView(story: story, storyprofile: storyprofile,)));
+            context,
+            MaterialPageRoute(
+                builder: (context) => YourStoryView(
+                      story: story,
+                      storyprofile: storyprofile,
+                      user_name: user_name,
+                      time: time,
+                    )));
       },
       child: Container(
         width: 130,

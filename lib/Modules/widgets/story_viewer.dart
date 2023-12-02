@@ -5,33 +5,41 @@ class YourStoryView extends StatelessWidget {
   static final StoryController controller = StoryController();
   String storyprofile;
   String story;
-  YourStoryView({required this.story,required this.storyprofile});
+  String user_name;
+  String time;
+  YourStoryView(
+      {required this.story,
+      required this.storyprofile,
+      required this.user_name,
+      required this.time});
 
   @override
   Widget build(BuildContext context) {
     List<StoryItem> storyItems = [
       StoryItem.pageProviderImage(
-          AssetImage(story),
+        AssetImage(story),
         imageFit: BoxFit.cover,
-    duration: Duration(seconds: 3),
+        duration: Duration(seconds: 3),
       ),
       StoryItem.text(
-        title: 'Hello, this is Voxial',
-        backgroundColor: Colors.white
-      ),
+          title: 'Hello, this is Voxial', backgroundColor: Colors.orangeAccent),
     ];
     return Scaffold(
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
           StoryView(
-              storyItems: storyItems,
-              controller: controller,
-              inline: false,
-              repeat: false,
-              onVerticalSwipeComplete: (direction) {
-                if (direction == Direction.down) Navigator.pop(context);
-              }),
+            storyItems: storyItems,
+            controller: controller,
+            inline: false,
+            repeat: false,
+            onVerticalSwipeComplete: (direction) {
+              if (direction == Direction.down) Navigator.pop(context);
+            },
+            onComplete: () {
+              Navigator.pop(context);
+            },
+          ),
           Positioned(
             top: 60.0,
             left: 20.0,
@@ -52,8 +60,7 @@ class YourStoryView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                         border: Border.all(color: Color(0xff323436), width: 4)),
                     child: CircleAvatar(
-                      backgroundImage:
-                          AssetImage(storyprofile),
+                      backgroundImage: AssetImage(storyprofile),
                     ),
                   ),
                 ),
@@ -63,7 +70,7 @@ class YourStoryView extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      "adham",
+                      user_name,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -71,7 +78,7 @@ class YourStoryView extends StatelessWidget {
                           decoration: TextDecoration.none),
                     ),
                     Text(
-                      "1m ago",
+                      time,
                       style: TextStyle(
                           color: Colors.white70,
                           fontSize: 15,
@@ -110,23 +117,22 @@ class YourStoryView extends StatelessWidget {
                                 color: Color(0xffECEBED))),
                       ),
                     ),
-                   Container(
-                     padding: EdgeInsets.all(5),
-                     width: 40,
-                     height: 60,
-                     decoration: BoxDecoration(
-                       shape: BoxShape.circle,
-                       gradient: LinearGradient(
-                           begin: Alignment.topLeft,
-                           end: Alignment.topRight,
-                           colors: [Color(0xffEB4E2A),
-                             Color(0xffF0C11A)
-                           ]
-
-                       ),
-                     ),
-                     child: ImageIcon(AssetImage("assets/images/Send_icons.png"),color: Colors.white,),
-                   )
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      width: 40,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.topRight,
+                            colors: [Color(0xffEB4E2A), Color(0xffF0C11A)]),
+                      ),
+                      child: ImageIcon(
+                        AssetImage("assets/images/Send_icons.png"),
+                        color: Colors.white,
+                      ),
+                    )
                   ],
                 )),
           )
