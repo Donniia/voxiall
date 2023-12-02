@@ -15,7 +15,8 @@ class Message_screen extends StatelessWidget {
     var media = MediaQuery.of(context).size;
 
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: media.height * 0.05, horizontal: media.width * 0.1),
+      padding: EdgeInsets.symmetric(
+          vertical: media.height * 0.05, horizontal: media.width * 0.1),
       child: Scaffold(
         appBar: AppBar(
           leading: GestureDetector(
@@ -23,7 +24,8 @@ class Message_screen extends StatelessWidget {
               Navigator.pushReplacementNamed(context, HomeScreen.routName);
             },
             child: Container(
-              margin: EdgeInsets.only(left: media.width * 0.02, top: media.height * 0.01),
+              margin: EdgeInsets.only(
+                  left: media.width * 0.02, top: media.height * 0.01),
               alignment: Alignment.center,
               width: media.width * 0.1,
               height: media.width * 0.1,
@@ -62,8 +64,10 @@ class Message_screen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: media.height * 0.02, bottom: media.height * 0.02),
-                  padding: EdgeInsets.only(left: media.width * 0.03, right: media.width * 0.04),
+                  margin: EdgeInsets.only(
+                      top: media.height * 0.02, bottom: media.height * 0.02),
+                  padding: EdgeInsets.only(
+                      left: media.width * 0.03, right: media.width * 0.04),
                   decoration: BoxDecoration(
                     color: Color(0xff323436),
                     borderRadius: BorderRadius.circular(media.height * 0.05),
@@ -76,7 +80,9 @@ class Message_screen extends StatelessWidget {
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Who do you want to chat with?",
-                            hintStyle: TextStyle(fontSize: media.width * 0.035, color: Color(0xffECEBED)),
+                            hintStyle: TextStyle(
+                                fontSize: media.width * 0.035,
+                                color: Color(0xffECEBED)),
                           ),
                         ),
                       ),
@@ -135,7 +141,26 @@ class Message_screen extends StatelessWidget {
                   color: Color(0xff323436),
                   thickness: media.height * 0.002,
                 ),
-                Chat_user(),
+                Chat_user(
+                    mess_user_img: "assets/images/Jessica_Thompson1.png",
+                    name_user: "Jessica Thompson",
+                    text_user: "Hey you! Are u there?"),
+                Chat_user(
+                    mess_user_img: "assets/images/kat.png",
+                    name_user: "Kat Williams",
+                    text_user: "OMG! OMG! OMG!"),
+                Chat_user(
+                    mess_user_img: "assets/images/jacob.png",
+                    name_user: "Jacob Washington",
+                    text_user: "Sure. Sunday works for me!"),
+                Chat_user(
+                    mess_user_img: "assets/images/leslie.png",
+                    name_user: "Leslie Alexander",
+                    text_user: "Sent you an invite for next monday."),
+                Chat_user(
+                    mess_user_img: "assets/images/tony.png",
+                    name_user: "Tony Monta",
+                    text_user: "How’s Alicia doing? Ask her to give m..."),
               ],
             );
           },

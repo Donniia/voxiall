@@ -64,10 +64,10 @@ class Search_Screen extends StatelessWidget {
                   path2: "assets/images/person1.png",
                 ),
                 SliderPost(
-                  username: "Michelle Ogilvy",
-                  profilepath: "assets/images/Profile4.png",
-                  path1: "assets/images/person1.png",
-                  path2: "assets/images/person1.png",
+                  username: "daniel radcliffe",
+                  profilepath: "assets/images/potter1.png",
+                  path1: "assets/images/potter.png",
+                  path2: "assets/images/potter2.jpg",
                 ),
               ],
             );

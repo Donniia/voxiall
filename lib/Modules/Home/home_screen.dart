@@ -115,6 +115,12 @@ class HomeScreen extends StatelessWidget {
                 height: 2,
                 thickness: 2,
               ),
+              PhotoPost(
+                username: "Cillian Murphy",
+                profilepath: "assets/images/ProfilePhoto2.png",
+                path1: "assets/images/caillian1.png",
+              ),
+
               Post(
                 username: "Jacob Washington",
                 profilepath: "assets/images/Profile2.png",
@@ -141,6 +147,11 @@ class HomeScreen extends StatelessWidget {
                 username: "Dustin Grant",
                 profilepath: "assets/images/Profile6.png",
                 path1: "assets/images/postphoto2.png",
+              ),
+              PhotoPost(
+                username: "Jessica Thompson",
+                profilepath: "assets/images/Jessica_Thompson1.png",
+                path1: "assets/images/post3.png",
               ),
             ],
           );

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Chat_user extends StatelessWidget {
-  const Chat_user({Key? key});
+  String mess_user_img;
+  String name_user;
+  String text_user;
+
+  Chat_user({Key? key,required this.mess_user_img,required this.name_user,required this.text_user});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +19,7 @@ class Chat_user extends StatelessWidget {
         Row(
           children: [
             CircleAvatar(
-              child: Image.asset("assets/images/Jessica_Thompson1.png"),
+              child: Image.asset(mess_user_img),
               maxRadius: media.width * 0.08,
             ),
             SizedBox(
@@ -24,14 +28,14 @@ class Chat_user extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Jessica Thompson",
+                Text(name_user,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: media.width * 0.045,
                     )),
                 Text(
-                  "Hey you! Are u there? ",
+                  text_user,
                   style: TextStyle(color: Colors.white, fontSize: media.width * 0.035),
                 ),
               ],
