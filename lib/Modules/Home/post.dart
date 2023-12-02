@@ -7,7 +7,7 @@ class Post extends StatelessWidget {
   final String profilepath;
   final String post;
 
-  Post({
+  const Post({
     required this.username,
     required this.profilepath,
     required this.post,

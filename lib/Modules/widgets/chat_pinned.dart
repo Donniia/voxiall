@@ -24,7 +24,7 @@ class Chat_pinned extends StatelessWidget {
           Text(
             mass_name,
             style: TextStyle(
-              color: Color(0xffFFFFFF),
+              color: const Color(0xffFFFFFF),
               fontWeight: FontWeight.w800,
               fontSize: media.width * 0.04,
             ),

@@ -21,22 +21,22 @@ class Search_Screen extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.only(left: media.width * 0.04, right: media.width * 0.05),
                   decoration: BoxDecoration(
-                    color: Color(0xff323436),
+                    color: const Color(0xff323436),
                     borderRadius: BorderRadius.circular(media.width * 0.2),
                   ),
                   child: Row(
                     children: [
                       Expanded(
                         child: TextField(
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Search for people, posts, tags...",
-                            hintStyle: TextStyle(fontSize: media.width * 0.03, color: Color(0xffECEBED)),
+                            hintStyle: TextStyle(fontSize: media.width * 0.03, color: const Color(0xffECEBED)),
                           ),
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.search,
                         color: Color(0xff727477),
                       )

@@ -4,7 +4,7 @@ import 'package:voxiall/Modules/widgets/chat_pinned.dart';
 import 'package:voxiall/Modules/widgets/chat_users.dart';
 
 class Message_screen extends StatelessWidget {
-  LinearGradient colored = LinearGradient(
+  LinearGradient colored = const LinearGradient(
       colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter);
@@ -31,10 +31,10 @@ class Message_screen extends StatelessWidget {
               height: media.width * 0.1,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color(0xff181A1C),
-                border: Border.all(color: Color(0xff323436), width: 0.8),
+                color: const Color(0xff181A1C),
+                border: Border.all(color: const Color(0xff323436), width: 0.8),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_outlined,
                 color: Color(0xffEB4E2A),
               ),
@@ -69,24 +69,24 @@ class Message_screen extends StatelessWidget {
                   padding: EdgeInsets.only(
                       left: media.width * 0.03, right: media.width * 0.04),
                   decoration: BoxDecoration(
-                    color: Color(0xff323436),
+                    color: const Color(0xff323436),
                     borderRadius: BorderRadius.circular(media.height * 0.05),
                   ),
                   child: Row(
                     children: [
                       Expanded(
                         child: TextField(
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Who do you want to chat with?",
                             hintStyle: TextStyle(
                                 fontSize: media.width * 0.035,
-                                color: Color(0xffECEBED)),
+                                color: const Color(0xffECEBED)),
                           ),
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.search,
                         color: Color(0xff727477),
                       )
@@ -94,7 +94,7 @@ class Message_screen extends StatelessWidget {
                   ),
                 ),
                 Divider(
-                  color: Color(0xff323436),
+                  color: const Color(0xff323436),
                   thickness: media.height * 0.002,
                 ),
                 SizedBox(
@@ -103,7 +103,7 @@ class Message_screen extends StatelessWidget {
                 Text(
                   "Pinned",
                   style: TextStyle(
-                    color: Color(0xff727477),
+                    color: const Color(0xff727477),
                     fontSize: media.width * 0.04,
                     fontWeight: FontWeight.w500,
                   ),
@@ -138,7 +138,7 @@ class Message_screen extends StatelessWidget {
                   height: media.height * 0.015,
                 ),
                 Divider(
-                  color: Color(0xff323436),
+                  color: const Color(0xff323436),
                   thickness: media.height * 0.002,
                 ),
                 Chat_user(

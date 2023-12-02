@@ -52,7 +52,7 @@ class StoryItem extends StatelessWidget {
               padding: const EdgeInsets.all(3),
               margin: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.topRight,
                     colors: [Color(0xffEB4E2A), Color(0xffF0C11A)]),

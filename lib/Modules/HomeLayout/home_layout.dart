@@ -6,7 +6,7 @@ import 'package:voxiall/Modules/Post/create_post.dart';
 import 'package:voxiall/Modules/Search/search_screen.dart';
 
 class HomeLayout extends StatefulWidget {
-  HomeLayout({Key? key});
+  const HomeLayout({Key? key});
   static const String routeName = "home";
 
   @override
@@ -17,11 +17,11 @@ class _HomeLayoutState extends State<HomeLayout> {
   int selectedIndex = 0;
 
   List<Widget> screens = [
-    HomeScreen(),
+    const HomeScreen(),
     Search_Screen(),
     Create_post(),
-    AlertsScreen(),
-    Myprofile(),
+    const AlertsScreen(),
+    const Myprofile(),
   ];
 
   @override
@@ -48,13 +48,13 @@ class _HomeLayoutState extends State<HomeLayout> {
             });
           },
           items: [
-            BottomNavigationBarItem(
+          const  BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage("assets/images/home_icon.png"),
               ),
               label: "Home",
             ),
-            BottomNavigationBarItem(
+           const BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage("assets/images/search_icon.png"),
               ),
@@ -66,7 +66,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                 height: media.width < 600 ? 40 : 60,
                 width: media.width < 600 ? 40 : 60,
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.topRight,
                     colors: [
@@ -83,13 +83,13 @@ class _HomeLayoutState extends State<HomeLayout> {
               ),
               label: "plus",
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage("assets/images/alert_icon.png"),
               ),
               label: "Alert",
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage("assets/images/profile_icon.png"),
               ),
@@ -105,7 +105,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     showModalBottomSheet(
       context: context,
       builder: (context) => Container(),
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(25),
           topRight: Radius.circular(25),
