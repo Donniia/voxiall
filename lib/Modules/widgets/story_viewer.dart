@@ -2,29 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
 
 class YourStoryView extends StatelessWidget {
-  final StoryController controller = StoryController();
+  LinearGradient colored = LinearGradient(
+      colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter);
+  static final StoryController controller = StoryController();
+  String storyprofile;
+  String story;
+  YourStoryView({required this.story,required this.storyprofile});
 
   @override
   Widget build(BuildContext context) {
     List<StoryItem> storyItems = [
-      StoryItem.text(
-        title: 'Hello, this is a text story.',
-        backgroundColor: Colors.blue,
-      ),
       StoryItem.pageProviderImage(
-          AssetImage("assets/images/Story5.jpg"),
+          AssetImage(story),
         imageFit: BoxFit.cover,
     duration: Duration(seconds: 3),
       ),
-      StoryItem.pageImage(
-          imageFit: BoxFit.cover,
-          url:
-              'https://previews.123rf.com/images/rglinsky/rglinsky1201/rglinsky120100188/12336990-vertical-image-orient%C3%A9e-de-la-c%C3%A9l%C3%A8bre-tour-eiffel-%C3%A0-paris-france.jpg',
-          duration: Duration(seconds: 3),
-          controller: controller),
-
-
-      // Add more story items as needed
+      StoryItem.text(
+        title: 'Hello, this is Voxial',
+        backgroundColor: Colors.white
+      ),
     ];
     return Scaffold(
       body: Stack(
@@ -59,7 +57,7 @@ class YourStoryView extends StatelessWidget {
                         border: Border.all(color: Color(0xff323436), width: 4)),
                     child: CircleAvatar(
                       backgroundImage:
-                          AssetImage("assets/images/storyprofile2.png"),
+                          AssetImage(storyprofile),
                     ),
                   ),
                 ),

@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/widgets/story_viewer.dart';
 
-
 class StoryItem extends StatelessWidget {
- String storyprofile;
- String story;
- StoryItem({required this.storyprofile,required this.story});
+  String storyprofile;
+  String story;
+  StoryItem({required this.storyprofile, required this.story});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>YourStoryView()));},
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => YourStoryView(story: story, storyprofile: storyprofile,)));
+      },
       child: Container(
         width: 130,
         height: 180,
-        margin: const EdgeInsets.only(left: 10, bottom: 40,top: 15),
+        margin: const EdgeInsets.only(left: 10, bottom: 40, top: 15),
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
@@ -49,5 +51,3 @@ class StoryItem extends StatelessWidget {
     );
   }
 }
-
-
