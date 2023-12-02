@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Home/post.dart';
 import 'package:voxiall/Modules/Home/slider_%20post_widget.dart';
 import 'package:voxiall/Modules/Home/story_item.dart';
+import 'package:voxiall/Modules/Messages/message_screen.dart';
 import 'package:voxiall/Modules/widgets/photo_post.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -29,20 +30,23 @@ class HomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                             color: Colors.white),
                       ),
-                      Container(
-                        padding: const EdgeInsets.all(6),
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: const Color(0xff727477), width: 1.5),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: const Badge(
-                            backgroundColor: Color(0xffF0C11A),
-                            child: ImageIcon(
-                              AssetImage("assets/images/message_icon.png"),
-                              color: Color(0xffEB4E2A),
-                            )),
+                      GestureDetector(
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Message_screen()));},
+                        child: Container(
+                          padding: const EdgeInsets.all(6),
+                          width: 40,
+                          height: 40,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: const Color(0xff727477), width: 1.5),
+                              borderRadius: BorderRadius.circular(50)),
+                          child: const Badge(
+                              backgroundColor: Color(0xffF0C11A),
+                              child: ImageIcon(
+                                AssetImage("assets/images/message_icon.png"),
+                                color: Color(0xffEB4E2A),
+                              )),
+                        ),
                       ),
                     ],
                   ),
@@ -57,9 +61,9 @@ class HomeScreen extends StatelessWidget {
                           time: '30m ago',
                         ),
                         StoryItem(
-                          storyprofile: "assets/images/storyprofile1.png",
+                          storyprofile: "assets/images/Cr7.png",
                           story: "assets/images/Story2.png",
-                          user_name: 'cristiano',
+                          user_name: 'Cristiano',
                           time: '1h ago',
                         ),
                         StoryItem(

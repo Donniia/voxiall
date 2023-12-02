@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
 import 'package:voxiall/Modules/HomeLayout/home_layout.dart';
+import 'package:voxiall/Modules/Messages/message_screen.dart';
 import 'package:voxiall/Modules/Registeration/Sign_Up.dart';
 import 'package:voxiall/Modules/Registeration/log_in.dart';
 import 'package:voxiall/Modules/Splash.dart';
@@ -28,6 +29,7 @@ class MyApplication extends StatelessWidget {
         LogIn.routename:(context)=>LogIn(),
         SignUp.routeName:(context)=>SignUp(),
         HomeLayout.routeName:(context) =>HomeLayout(),
+        Message_screen.routename:(context) =>Message_screen(),
       },
     );
   }

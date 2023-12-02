@@ -15,6 +15,7 @@ class Assets {
   static const String imagesHomeIcon = 'assets/images/home_icon.png';
   static const String imagesLikeIcon = 'assets/images/Like_icon.png';
   static const String imagesLogo = 'assets/images/Logo.png';
+  static const String imagesMention = 'assets/images/mention.png';
   static const String imagesMessageIcon = 'assets/images/message_icon.png';
   static const String imagesPerson1 = 'assets/images/person1.png';
   static const String imagesPerson5 = 'assets/images/person5.png';
@@ -31,8 +32,10 @@ class Assets {
   static const String imagesProfilePhoto1 = 'assets/images/ProfilePhoto1.png';
   static const String imagesSaveIcon = 'assets/images/save_icon.png';
   static const String imagesSearchIcon = 'assets/images/search_icon.png';
+  static const String imagesSendIcons = 'assets/images/Send_icons.png';
   static const String imagesShareIcon = 'assets/images/share_icon.png';
   static const String imagesSplashScreen = 'assets/images/Splash_screen.png';
+  static const String imagesSteve = 'assets/images/steve.png';
   static const String imagesStory1 = 'assets/images/Story1.png';
   static const String imagesStory2 = 'assets/images/Story2.png';
   static const String imagesStory3 = 'assets/images/Story3.png';
@@ -44,6 +47,7 @@ class Assets {
   static const String imagesStoryprofile1 = 'assets/images/storyprofile1.png';
   static const String imagesStoryprofile2 = 'assets/images/storyprofile2.png';
   static const String imagesStoryprofile3 = 'assets/images/storyprofile3.png';
+  static const String imagesStoryview1 = 'assets/images/storyview1.png';
   static const String imagesVPost = 'assets/images/V_post.png';
   static const String imagesVProfile = 'assets/images/V_profile.png';
 
