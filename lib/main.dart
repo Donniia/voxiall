@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/Home/home_screen.dart';
 import 'package:voxiall/Modules/HomeLayout/home_layout.dart';
 import 'package:voxiall/Modules/Registeration/Sign_Up.dart';
 import 'package:voxiall/Modules/Registeration/log_in.dart';
 import 'package:voxiall/Modules/Splash.dart';
+
+
 import 'package:voxiall/core/app_theme.dart';
+
 
 
 void main() {
@@ -19,6 +23,7 @@ class MyApplication extends StatelessWidget {
       initialRoute: Splash.routeName,
       theme: AppTheme.dark,
       routes: {
+        HomeScreen.routName:(context) => HomeScreen(),
         Splash.routeName:(context) => Splash(),
         LogIn.routename:(context)=>LogIn(),
         SignUp.routeName:(context)=>SignUp(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/widgets/story_viewer.dart';
 
+
 class StoryItem extends StatelessWidget {
  String storyprofile;
  String story;
@@ -48,3 +49,5 @@ class StoryItem extends StatelessWidget {
     );
   }
 }
+
+
