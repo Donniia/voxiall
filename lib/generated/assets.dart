@@ -8,13 +8,16 @@ class Assets {
   static const String imagesBrithday = 'assets/images/brithday.png';
   static const String imagesCommentAlert = 'assets/images/comment_alert.png';
   static const String imagesCommentIcon = 'assets/images/Comment_icon.png';
+  static const String imagesCr7 = 'assets/images/Cr7.png';
   static const String imagesDotsVertical = 'assets/images/Dots_Vertical.png';
   static const String imagesFacebook = 'assets/images/facebook.png';
   static const String imagesFramelike = 'assets/images/Framelike.png';
   static const String imagesGoogle = 'assets/images/google.png';
   static const String imagesHomeIcon = 'assets/images/home_icon.png';
+  static const String imagesJessicaThompson1 = 'assets/images/Jessica_Thompson1.png';
   static const String imagesLikeIcon = 'assets/images/Like_icon.png';
   static const String imagesLogo = 'assets/images/Logo.png';
+  static const String imagesMai = 'assets/images/mai.png';
   static const String imagesMention = 'assets/images/mention.png';
   static const String imagesMessageIcon = 'assets/images/message_icon.png';
   static const String imagesPerson1 = 'assets/images/person1.png';
