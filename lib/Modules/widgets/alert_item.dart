@@ -17,28 +17,31 @@ class Alert_item extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                backgroundImage: AssetImage(img_path),
+              Container(
+                width: 40,
+                height: 55,
+                alignment: Alignment.topLeft,
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(img_path),
+                ),
               ),
               SizedBox(width: 7,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  RichText(text: TextSpan(
                     children: [
-                      Text(
-                        text_1,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w800),
-                      ),
-                      Text(text_2,
-                          style: TextStyle(
-                            color: Colors.white,
-                          )),
-                    ],
-                  ),
+                      TextSpan(text:  text_1, style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w800),),
+                      TextSpan(text:  text_2, style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14
+                      )),
+                    ]
+                  )),
+
                   SizedBox(height: 4,),
                   Text(
                     time,

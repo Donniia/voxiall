@@ -132,6 +132,7 @@ class Message_screen extends StatelessWidget {
                   thickness: 1.3,
                 ),
                 Chat_user(),
+
               ],
 
             );

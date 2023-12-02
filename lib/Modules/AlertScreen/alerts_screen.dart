@@ -69,12 +69,12 @@ class AlertsScreen extends StatelessWidget {
               Alert_item(
                   img_path: "assets/images/comment_alert.png",
                   text_1: "Katrina, Denver and +2 others ",
-                  text_2: "commented on your post.",
+                  text_2: "commented on \n your post.",
                   time: "1d ago"),
               Alert_item(
                   img_path: "assets/images/brithday.png",
                   text_1: "Savannah Wilson is ",
-                  text_2: "celebrating birthday today. Drop a wish! 🎉",
+                  text_2: "celebrating birthday today. \n Drop a wish! 🎉",
                   time: "1d ago"),
               Alert_item(
                   img_path: "assets/images/mention.png",

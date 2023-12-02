@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/AlertScreen/alerts_screen.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
+import 'package:voxiall/Modules/MyProfile/my_profile.dart';
 import 'package:voxiall/Modules/Post/create_post.dart';
 import 'package:voxiall/Modules/Search/search_screen.dart';
 
@@ -22,8 +23,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     Search_Screen(),
     Create_post(),
     AlertsScreen(),
-    HomeScreen(),
-
+    Myprofile(),
   ];
 
   @override
@@ -34,7 +34,7 @@ class _HomeLayoutState extends State<HomeLayout> {
         height: 95,
         decoration:const BoxDecoration(
           border: Border(
-            top: BorderSide(color: Color(0xff727477),width: 0.35)
+            top: BorderSide(color: Color(0xff727477),width: 1)
           )
         ),
         child: BottomNavigationBar(
