@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
+
 import 'package:voxiall/Modules/widgets/tab_item.dart';
 
 class custom_tabbar extends StatelessWidget {
