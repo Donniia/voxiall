@@ -33,7 +33,7 @@ class CustomBox extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(color: Color(0xff727477), fontSize: media.width * 0.047),
+            style: TextStyle(color: const Color(0xff727477), fontSize: media.width * 0.047),
           )
         ],
       ),

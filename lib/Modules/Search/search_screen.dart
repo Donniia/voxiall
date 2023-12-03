@@ -3,77 +3,86 @@ import 'package:voxiall/Modules/Home/slider_%20post_widget.dart';
 import 'package:voxiall/Modules/widgets/custom_tab_bar.dart';
 
 class Search_Screen extends StatelessWidget {
-  const Search_Screen({super.key});
+  const Search_Screen({Key? key});
 
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
 
     return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: media.height * 0.01,
-        horizontal: media.width * 0.03,
+      padding: EdgeInsets.fromLTRB(
+        media.width * 0.03,
+        media.height * 0.05, // Adjust the top padding for spacing
+        media.width * 0.03,
+        media.height * 0.01, // Adjust the bottom padding for spacing
       ),
       child: ListView.builder(
-          itemCount: 1,
-          itemBuilder: (context, index) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Container(
-                  padding: EdgeInsets.only(left: media.width * 0.04, right: media.width * 0.05),
-                  decoration: BoxDecoration(
-                    color: const Color(0xff323436),
-                    borderRadius: BorderRadius.circular(media.width * 0.2),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          style: const TextStyle(color: Colors.white),
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Search for people, posts, tags...",
-                            hintStyle: TextStyle(fontSize: media.width * 0.03, color: const Color(0xffECEBED)),
+        itemCount: 1,
+        itemBuilder: (context, index) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                padding: EdgeInsets.only(
+                  left: media.width * 0.04,
+                  right: media.width * 0.05,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color(0xff323436),
+                  borderRadius: BorderRadius.circular(media.width * 0.2),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Search for people, posts, tags...",
+                          hintStyle: TextStyle(
+                            fontSize: media.width * 0.03,
+                            color: const Color(0xffECEBED),
                           ),
                         ),
                       ),
-                      const Icon(
-                        Icons.search,
-                        color: Color(0xff727477),
-                      )
-                    ],
-                  ),
+                    ),
+                    const Icon(
+                      Icons.search,
+                      color: Color(0xff727477),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: media.height * 0.03,
+              ),
+              SizedBox(
+                height: media.height * 0.03,
+              ),
+              Text(
+                "Popular",
+                style: TextStyle(
+                  fontSize: media.width * 0.08,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
-                Text(
-                  "Popular",
-                  style: TextStyle(
-                    fontSize: media.width * 0.08,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-                SizedBox(height: media.height * 0.03),
-                custom_tabbar(),
-                const SliderPost(
-                  username: "Michelle Ogilvy",
-                  profilepath: "assets/images/Profile4.png",
-                  path1: "assets/images/person1.png",
-                  path2: "assets/images/person1.png",
-                ),
-                const SliderPost(
-                  username: "daniel radcliffe",
-                  profilepath: "assets/images/potter1.png",
-                  path1: "assets/images/potter.png",
-                  path2: "assets/images/potter2.jpg",
-                ),
-              ],
-            );
-          }),
+                textAlign: TextAlign.start,
+              ),
+              SizedBox(height: media.height * 0.03),
+          custom_tabbar(),
+              const SliderPost(
+                username: "Michelle Ogilvy",
+                profilepath: "assets/images/Profile4.png",
+                path1: "assets/images/person1.png",
+                path2: "assets/images/person1.png",
+              ),
+              const SliderPost(
+                username: "daniel radcliffe",
+                profilepath: "assets/images/potter1.png",
+                path1: "assets/images/potter.png",
+                path2: "assets/images/potter2.jpg",
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }

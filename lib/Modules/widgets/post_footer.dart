@@ -35,8 +35,8 @@ class _PostFooterState extends State<PostFooter> {
                     });
                   },
                   child: ImageIcon(
-                    AssetImage("assets/images/Like_icon.png"),
-                    color: isTabed ? Color(0xffEB4E2A) : Colors.white,
+                    const AssetImage("assets/images/Like_icon.png"),
+                    color: isTabed ? const Color(0xffEB4E2A) : Colors.white,
                   ),
                 ),
                 SizedBox(
@@ -55,7 +55,7 @@ class _PostFooterState extends State<PostFooter> {
             const SizedBox(width: 15),
             Row(
               children: [
-                ImageIcon(
+                const ImageIcon(
                   AssetImage("assets/images/Comment_icon.png"),
                   color: Colors.white,
                 ),
@@ -76,7 +76,7 @@ class _PostFooterState extends State<PostFooter> {
             Row(
               children: [
                 ImageIcon(
-                  AssetImage("assets/images/share_icon.png"),
+                  const AssetImage("assets/images/share_icon.png"),
                   color: Colors.white,
                   size: media.width * 0.046,
                 ),
@@ -93,8 +93,8 @@ class _PostFooterState extends State<PostFooter> {
                 )
               ],
             ),
-            Spacer(),
-            Container(
+            const Spacer(),
+            SizedBox(
               child: Image.asset("assets/images/save_icon.png"),
               height: media.width * 0.058,
               width: media.width * 0.058,

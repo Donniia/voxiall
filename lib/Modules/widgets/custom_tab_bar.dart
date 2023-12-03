@@ -13,7 +13,7 @@ class custom_tabbar extends StatelessWidget {
          indicatorWeight: 0.1,
         isScrollable: true,
         indicator: BoxDecoration(
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
               colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter),

@@ -26,7 +26,7 @@ class CustomTextForm extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           horizontal: media.width * 0.1, vertical: media.height * 0.015),
       child: TextFormField(
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         obscureText: obsecure,
         maxLines: maxLines,
         validator: validator,
@@ -35,7 +35,7 @@ class CustomTextForm extends StatelessWidget {
           suffixIconColor: theme.primaryColor,
           label: Text(
             labelText,
-            style: TextStyle(
+            style: const TextStyle(
               color: const Color(0xff727477),
             ),
           ),

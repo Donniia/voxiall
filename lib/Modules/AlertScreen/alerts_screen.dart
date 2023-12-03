@@ -19,10 +19,10 @@ class AlertsScreen extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -46,7 +46,7 @@ class AlertsScreen extends StatelessWidget {
               SizedBox(
                 height: screenHeight * 0.04,
               ),
-              Text(
+              const Text(
                 "Today",
                 style: TextStyle(color: Color(0xff727477), fontSize: 18),
                 textAlign: TextAlign.start,
@@ -63,14 +63,14 @@ class AlertsScreen extends StatelessWidget {
                 text_2: "liked your post.",
                 time: "30m ago",
               ),
-              Divider(
+              const Divider(
                 color: Color(0xff727477),
                 thickness: 1,
               ),
               SizedBox(
                 height: screenHeight * 0.02,
               ),
-              Text(
+              const Text(
                 "Yesterday",
                 style: TextStyle(color: Color(0xff727477), fontSize: 18),
                 textAlign: TextAlign.start,

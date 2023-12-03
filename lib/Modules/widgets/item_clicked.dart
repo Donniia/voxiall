@@ -6,7 +6,7 @@ class ItemTabed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Post(username: "Ichigo Kurosaki", profilepath: "assets/images/myProfile.png", post: "dddddd"),
       ],

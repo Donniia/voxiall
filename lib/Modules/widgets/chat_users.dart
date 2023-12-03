@@ -40,15 +40,15 @@ class Chat_user extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
-            Text("4h ago",style: TextStyle(color: Color(0xff727477),fontSize: 14),)
+            const Spacer(),
+            const Text("4h ago",style: TextStyle(color: Color(0xff727477),fontSize: 14),)
           ],
         ),
         SizedBox(
           height: media.height * 0.02,
         ),
         Divider(
-          color: Color(0xff323436),
+          color: const Color(0xff323436),
           thickness: media.width * 0.007,
         ),
       ],

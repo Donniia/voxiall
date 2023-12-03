@@ -34,7 +34,7 @@ class PostHeader extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                color: Color(0xffECEBED),
+                color: const Color(0xffECEBED),
                 fontSize: media.width * 0.048,
                 fontWeight: FontWeight.w500,
               ),
@@ -42,14 +42,14 @@ class PostHeader extends StatelessWidget {
             Text(
               "1h ago",
               style: TextStyle(
-                color: Color(0xff727477),
+                color: const Color(0xff727477),
                 fontSize: media.width * 0.040,
                 fontWeight: FontWeight.w500,
               ),
             ),
           ],
         ),
-        Spacer(),
+        const Spacer(),
         Container(
           child: Image.asset("assets/images/Dots_Vertical.png"),
           height: media.width * 0.08,

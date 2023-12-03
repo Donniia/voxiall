@@ -12,11 +12,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
 
     return Padding(
       padding: EdgeInsets.symmetric(
         vertical: screenHeight * 0.01,
-        horizontal: 5,
+        horizontal: screenWidth * 0.01,
       ),
       child: ListView.builder(
         itemCount: 1,
@@ -74,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                     StoryItem(
                       storyprofile: "assets/images/Profile_Photo.png",
                       story: "assets/images/Story1.png",
-                      UserName: 'Donia',
+                      UserName: 'Kim',
                       time: '30m ago',
                     ),
                     StoryItem(

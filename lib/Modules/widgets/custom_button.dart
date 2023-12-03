@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         height: media.height * 0.06,
-        decoration: BoxDecoration(color: Color(0xffEB4E2A)),
+        decoration: const BoxDecoration(color: Color(0xffEB4E2A)),
         child: Text(
           title,
           style: TextStyle(

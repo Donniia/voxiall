@@ -4,7 +4,7 @@ class Chat_pinned extends StatelessWidget {
   final String mass_profile;
   final String mass_name;
 
-  Chat_pinned({required this.mass_profile, required this.mass_name});
+  const Chat_pinned({super.key, required this.mass_profile, required this.mass_name});
 
   @override
   Widget build(BuildContext context) {

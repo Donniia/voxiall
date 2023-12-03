@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
 
-
 class Create_post extends StatelessWidget {
- final LinearGradient colored = const LinearGradient(
+  final LinearGradient colored = const LinearGradient(
       colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter);
@@ -21,7 +20,7 @@ class Create_post extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pushReplacementNamed(context, HomeScreen.routName);
                 },
                 child: const Text(
@@ -47,7 +46,7 @@ class Create_post extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pushReplacementNamed(context, HomeScreen.routName);
                 },
                 child: Container(
@@ -79,8 +78,7 @@ class Create_post extends StatelessWidget {
                 height: 75,
                 alignment: Alignment.topLeft,
                 child: const CircleAvatar(
-                  backgroundImage:
-                      AssetImage("assets/images/ProfilePhoto1.png"),
+                  backgroundImage: AssetImage("assets/images/myProfile.png"),
                 ),
               ),
               const Expanded(
@@ -93,7 +91,7 @@ class Create_post extends StatelessWidget {
                   hintStyle: TextStyle(color: Color(0xff727477)),
                 ),
                 scrollPadding: EdgeInsets.all(20.0),
-                autofocus: true,
+                autofocus: false,
               )),
             ],
           ),
@@ -127,11 +125,7 @@ class Create_post extends StatelessWidget {
                       gradient: const LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.topRight,
-                          colors: [Color(0xffEB4E2A),
-                            Color(0xffF0C11A)
-                          ]
-
-                      ),
+                          colors: [Color(0xffEB4E2A), Color(0xffF0C11A)]),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: const Text(
@@ -167,5 +161,4 @@ class Create_post extends StatelessWidget {
       ),
     );
   }
-
 }
