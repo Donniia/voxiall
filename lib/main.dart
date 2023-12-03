@@ -26,7 +26,7 @@ class MyApplication extends StatelessWidget {
       routes: {
         HomeScreen.routName:(context) => const HomeScreen(),
         Splash.routeName:(context) => const Splash(),
-        LogIn.routename:(context)=>LogIn(),
+        LogIn.routename:(context)=>const LogIn(),
         SignUp.routeName:(context)=>const SignUp(),
         HomeLayout.routeName:(context) =>const HomeLayout(),
         MessageScreen.routeName:(context) =>const MessageScreen(),

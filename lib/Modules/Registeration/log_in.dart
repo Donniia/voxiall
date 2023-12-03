@@ -8,6 +8,8 @@ import 'package:voxiall/Modules/widgets/custom_text_field.dart';
 class LogIn extends StatefulWidget {
   static const String routename = "login";
 
+  const LogIn({super.key});
+
   @override
   State<LogIn> createState() => _LogInState();
 }
