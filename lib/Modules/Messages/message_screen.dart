@@ -3,12 +3,14 @@ import 'package:voxiall/Modules/Home/home_screen.dart';
 import 'package:voxiall/Modules/widgets/chat_pinned.dart';
 import 'package:voxiall/Modules/widgets/chat_users.dart';
 
-class Message_screen extends StatelessWidget {
-  LinearGradient colored = const LinearGradient(
+class MessageScreen extends StatelessWidget {
+  final LinearGradient colored = const LinearGradient(
       colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter);
   static const String routeName = "Message_screen";
+
+  const MessageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

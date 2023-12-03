@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voxiall/Modules/widgets/item_clicked.dart';
+
 
 class Myprofile extends StatefulWidget {
   const Myprofile({super.key});
@@ -22,10 +22,10 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
     super.dispose();
   }
   List<Widget> tabs = [
-    Text("Posts",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
-    Text("Stories",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
-    Text("Links",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
-    Text("Tagged",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+    const Text("Posts",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+    const Text("Stories",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+    const Text("Links",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
+    const Text("Tagged",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w800),),
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
           Stack(
             alignment: const Alignment(0, 9),
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 180,
                 child: Image.asset(
@@ -46,10 +46,10 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(2.5),
+                padding: const EdgeInsets.all(2.5),
                 width: 160,
                 height: 160,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
@@ -57,17 +57,17 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
                       colors: [Color(0xffEB4E2A), Color(0xffF0C11A)]),
                 ),
                 child: Container(
-                    padding: EdgeInsets.all(2.5),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(2.5),
+                    decoration: const BoxDecoration(
                         color: Colors.black, shape: BoxShape.circle),
                     child: Image.asset("assets/images/myProfile.png")),
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 90,
           ),
-          Text(
+          const Text(
             "Ichigo Kurosaki",
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.w800, color: Colors.white),
@@ -75,7 +75,7 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
           const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             "Brooklyn, NY",
             style: TextStyle(
                 fontSize: 18,
@@ -85,7 +85,7 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
           const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             "Writer by Profession. Artist by Passion!",
             style: TextStyle(
                 fontSize: 17, fontWeight: FontWeight.w500, color: Colors.white),
@@ -96,7 +96,7 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(
+              const Column(
                 children: [
                   Text(
                     "2,467",
@@ -114,7 +114,7 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
                   )
                 ],
               ),
-              Column(
+              const Column(
                 children: [
                   Text(
                     "1,589",
@@ -138,16 +138,16 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
                 height: 40,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Color(0xffF0C11A),width: 1.3)
+                    border: Border.all(color: const Color(0xffF0C11A),width: 1.3)
                 ),
-                child: Text("Logout",style:  TextStyle(
+                child: const Text("Logout",style:  TextStyle(
                     color: Color(0xffEB4E2A),
                     fontSize: 18,
                     fontWeight: FontWeight.w500),),
               )
             ],
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           DefaultTabController(
             length: 4,
             child: Column(
@@ -155,8 +155,8 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
                 TabBar(
                   controller: _controller,
                     unselectedLabelColor: Colors.grey,
-                    indicatorColor: Color(0xffEB4E2A),
-                    tabs: [
+                    indicatorColor: const Color(0xffEB4E2A),
+                    tabs: const [
                       Tab(
                         text: "Posts",
                       ),

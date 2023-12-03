@@ -4,13 +4,13 @@ import 'package:voxiall/Modules/widgets/story_viewer.dart';
 class StoryItem extends StatelessWidget {
   final String storyprofile;
   final String story;
-  final String user_name;
+  final String UserName;
   final String time;
 
-  StoryItem({
+  const StoryItem({super.key,
     required this.storyprofile,
     required this.story,
-    required this.user_name,
+    required this.UserName,
     required this.time,
   });
 
@@ -28,7 +28,7 @@ class StoryItem extends StatelessWidget {
             builder: (context) => YourStoryView(
               story: story,
               storyprofile: storyprofile,
-              user_name: user_name,
+              user_name: UserName,
               time: time,
             ),
           ),
@@ -61,7 +61,7 @@ class StoryItem extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    border: Border.all(color: Color(0xff323436), width: 4)),
+                    border: Border.all(color: const Color(0xff323436), width: 4)),
                 child: CircleAvatar(
                   backgroundImage: AssetImage(storyprofile),
                 ),

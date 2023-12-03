@@ -7,7 +7,7 @@ class Post extends StatelessWidget {
   final String profilepath;
   final String post;
 
-  const Post({
+  const Post({super.key,
     required this.username,
     required this.profilepath,
     required this.post,
@@ -33,7 +33,7 @@ class Post extends StatelessWidget {
             ),
             child: Text(
               post,
-              style: TextStyle(color: Colors.white, fontSize: 22),
+              style: const TextStyle(color: Colors.white, fontSize: 22),
             ),
           ),
           PostFooter(),

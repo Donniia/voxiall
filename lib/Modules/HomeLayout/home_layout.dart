@@ -6,7 +6,7 @@ import 'package:voxiall/Modules/Post/create_post.dart';
 import 'package:voxiall/Modules/Search/search_screen.dart';
 
 class HomeLayout extends StatefulWidget {
-  const HomeLayout({Key? key});
+  const HomeLayout({super.key});
   static const String routeName = "home";
 
   @override

@@ -8,7 +8,7 @@ class SliderPost extends StatelessWidget {
   final String path1;
   final String path2;
 
-  SliderPost({
+  const SliderPost({super.key,
     required this.username,
     required this.profilepath,
     required this.path1,
@@ -29,7 +29,7 @@ class SliderPost extends StatelessWidget {
             title: username,
             imgPath: profilepath,
           ),
-          Container(
+          SizedBox(
             height: containerHeight,
             child: PageView(
               children: [

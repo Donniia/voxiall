@@ -3,6 +3,8 @@ import 'package:voxiall/Modules/Home/slider_%20post_widget.dart';
 import 'package:voxiall/Modules/widgets/custom_tab_bar.dart';
 
 class Search_Screen extends StatelessWidget {
+  const Search_Screen({super.key});
+
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
@@ -57,13 +59,13 @@ class Search_Screen extends StatelessWidget {
                 ),
                 SizedBox(height: media.height * 0.03),
                 custom_tabbar(),
-                SliderPost(
+                const SliderPost(
                   username: "Michelle Ogilvy",
                   profilepath: "assets/images/Profile4.png",
                   path1: "assets/images/person1.png",
                   path2: "assets/images/person1.png",
                 ),
-                SliderPost(
+                const SliderPost(
                   username: "daniel radcliffe",
                   profilepath: "assets/images/potter1.png",
                   path1: "assets/images/potter.png",

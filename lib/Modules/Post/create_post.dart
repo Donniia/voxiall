@@ -3,10 +3,12 @@ import 'package:voxiall/Modules/Home/home_screen.dart';
 
 
 class Create_post extends StatelessWidget {
-  LinearGradient colored = LinearGradient(
+ final LinearGradient colored = const LinearGradient(
       colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter);
+
+  const Create_post({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class Create_post extends StatelessWidget {
                 onTap: (){
                   Navigator.pushReplacementNamed(context, HomeScreen.routName);
                 },
-                child: Text(
+                child: const Text(
                   "Discard",
                   style: TextStyle(
                     fontSize: 20,
@@ -35,7 +37,7 @@ class Create_post extends StatelessWidget {
                 shaderCallback: (Rect rect) {
                   return colored.createShader(rect);
                 },
-                child: Text(
+                child: const Text(
                   "Create",
                   style: TextStyle(
                     fontSize: 20,
@@ -54,8 +56,8 @@ class Create_post extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: Color(0xffEB4E2A)),
-                  child: Text(
+                      color: const Color(0xffEB4E2A)),
+                  child: const Text(
                     "publish",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -67,7 +69,7 @@ class Create_post extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
           Row(
@@ -76,12 +78,12 @@ class Create_post extends StatelessWidget {
                 width: 50,
                 height: 75,
                 alignment: Alignment.topLeft,
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   backgroundImage:
                       AssetImage("assets/images/ProfilePhoto1.png"),
                 ),
               ),
-              Expanded(
+              const Expanded(
                   child: TextField(
                 maxLines: 3,
                 style: TextStyle(color: Colors.white),
@@ -96,25 +98,25 @@ class Create_post extends StatelessWidget {
             ],
           ),
           SizedBox.fromSize(
-            size: Size.square(45),
+            size: const Size.square(45),
             child: FloatingActionButton(
               onPressed: () {},
-              backgroundColor: Color(0xff323436),
-              child: Icon(
+              backgroundColor: const Color(0xff323436),
+              child: const Icon(
                 Icons.add,
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Center(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
               width: 155,
               height: 32,
               decoration: BoxDecoration(
-                  color: Color(0xff181A1C),
+                  color: const Color(0xff181A1C),
                   borderRadius: BorderRadius.circular(25),
-                  border: Border.all(color: Color(0xff323436))),
+                  border: Border.all(color: const Color(0xff323436))),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -122,7 +124,7 @@ class Create_post extends StatelessWidget {
                     width: 68,
                     height: 20,
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.topRight,
                           colors: [Color(0xffEB4E2A),
@@ -132,7 +134,7 @@ class Create_post extends StatelessWidget {
                       ),
                       borderRadius: BorderRadius.circular(25),
                     ),
-                    child: Text(
+                    child: const Text(
                       "POST",
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -148,7 +150,7 @@ class Create_post extends StatelessWidget {
                       // color: Colors.orange,
                       borderRadius: BorderRadius.circular(25),
                     ),
-                    child: Text(
+                    child: const Text(
                       "STORY",
                       textAlign: TextAlign.center,
                       style: TextStyle(

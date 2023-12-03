@@ -12,7 +12,7 @@ import 'package:voxiall/core/app_theme.dart';
 
 
 void main() {
-  runApp(MyApplication());
+  runApp(const MyApplication());
 }
 class MyApplication extends StatelessWidget {
   const MyApplication({super.key});
@@ -24,12 +24,12 @@ class MyApplication extends StatelessWidget {
       initialRoute: Splash.routeName,
       theme: AppTheme.dark,
       routes: {
-        HomeScreen.routName:(context) => HomeScreen(),
-        Splash.routeName:(context) => Splash(),
+        HomeScreen.routName:(context) => const HomeScreen(),
+        Splash.routeName:(context) => const Splash(),
         LogIn.routename:(context)=>LogIn(),
-        SignUp.routeName:(context)=>SignUp(),
-        HomeLayout.routeName:(context) =>HomeLayout(),
-        Message_screen.routeName:(context) =>Message_screen(),
+        SignUp.routeName:(context)=>const SignUp(),
+        HomeLayout.routeName:(context) =>const HomeLayout(),
+        MessageScreen.routeName:(context) =>const MessageScreen(),
       },
     );
   }

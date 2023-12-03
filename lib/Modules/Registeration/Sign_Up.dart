@@ -7,6 +7,8 @@ import '../widgets/custom_box.dart';
 class SignUp extends StatefulWidget {
   static const String routeName = "signup";
 
+  const SignUp({super.key});
+
   @override
   State<SignUp> createState() => _SignUpState();
 }
@@ -77,8 +79,8 @@ class _SignUpState extends State<SignUp> {
                       setState(() {});
                     },
                     child: isVisible == true
-                        ? Icon(Icons.visibility, color: Color(0xff727477))
-                        : Icon(Icons.visibility_off, color: Color(0xff727477)),
+                        ? const Icon(Icons.visibility, color: Color(0xff727477))
+                        : const Icon(Icons.visibility_off, color: Color(0xff727477)),
                   ),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
@@ -95,8 +97,8 @@ class _SignUpState extends State<SignUp> {
                       setState(() {});
                     },
                     child: isVisible == true
-                        ? Icon(Icons.visibility, color: Color(0xff727477))
-                        : Icon(Icons.visibility_off, color: Color(0xff727477)),
+                        ? const Icon(Icons.visibility, color: Color(0xff727477))
+                        : const Icon(Icons.visibility_off, color: Color(0xff727477)),
                   ),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
@@ -128,7 +130,7 @@ class _SignUpState extends State<SignUp> {
                 SizedBox(
                   height: media.height < 600 ? 16 : 20,
                 ),
-                Text(
+                const Text(
                   "or continue with",
                   textAlign: TextAlign.center,
                   style: TextStyle(

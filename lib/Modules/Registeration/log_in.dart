@@ -62,11 +62,11 @@ class _LogInState extends State<LogIn> {
                       setState(() {});
                     },
                     child: isvisible == true
-                        ? Icon(
+                        ? const Icon(
                       Icons.visibility,
                       color: Color(0xff727477),
                     )
-                        : Icon(
+                        : const Icon(
                       Icons.visibility_off,
                       color: Color(0xff727477),
                     ),
@@ -86,7 +86,7 @@ class _LogInState extends State<LogIn> {
                 SizedBox(
                   height: media.height < 600 ? 10 : 20,
                 ),
-                Text(
+                const Text(
                   "Or continue with",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Color(0xff727477), fontSize: 17),
@@ -117,7 +117,7 @@ class _LogInState extends State<LogIn> {
                       Text(
                         "Don't have an account?",
                         style: TextStyle(
-                          color: Color(0xff727477),
+                          color: const Color(0xff727477),
                           fontSize: media.width < 600 ? 14 : 17,
                         ),
                       ),
