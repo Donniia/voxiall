@@ -18,7 +18,7 @@ class MessageScreen extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-          vertical: media.height * 0.05, horizontal: media.width * 0.01),
+          vertical: media.height * 0.01, horizontal: media.width * 0.01),
       child: Scaffold(
         appBar: AppBar(
           leading: GestureDetector(
