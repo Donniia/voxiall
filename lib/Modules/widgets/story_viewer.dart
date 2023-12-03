@@ -22,7 +22,7 @@ class YourStoryView extends StatelessWidget {
       StoryItem.pageProviderImage(
         AssetImage(story),
         imageFit: BoxFit.cover,
-        duration: Duration(seconds: 3),
+        duration: const Duration(seconds: 3),
       ),
       StoryItem.text(
         title: 'Hello, this is Voxial',
@@ -42,12 +42,12 @@ class YourStoryView extends StatelessWidget {
             onVerticalSwipeComplete: (direction) {
               if (direction == Direction.down) Navigator.pop(context);
             },
-            // onComplete: () {
-            //   controller.pause();
-            //   //controller.;
-            //   controller.play();
-            //   Navigator.pop(context);
-            // },
+            onComplete: () {
+              //controller.pause();
+              //controller.;
+              //controller.play();
+              Navigator.pop(context);
+            },
             // onStoryShow: (s){
             //   if (s==0){
             //     controller.pause();
@@ -65,7 +65,7 @@ class YourStoryView extends StatelessWidget {
                   padding: const EdgeInsets.all(3),
                   margin: const EdgeInsets.only(bottom: 10),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.topRight,
                       colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
@@ -76,7 +76,7 @@ class YourStoryView extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
                       border: Border.all(
-                        color: Color(0xff323436),
+                        color: const Color(0xff323436),
                         width: media.width * 0.016,
                       ),
                     ),
@@ -129,21 +129,21 @@ class YourStoryView extends StatelessWidget {
               width: media.width * 0.33,
               height: media.height * 0.072,
               decoration: BoxDecoration(
-                color: Color(0xff323436),
+                color: const Color(0xff323436),
                 borderRadius: BorderRadius.circular(media.height * 0.036),
               ),
               child: Row(
                 children: [
                   Expanded(
                     child: TextField(
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: "Type your reply here..",
                         hintStyle: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: media.width * 0.02,
-                          color: Color(0xffECEBED),
+                          color: const Color(0xffECEBED),
                         ),
                       ),
                     ),
@@ -152,7 +152,7 @@ class YourStoryView extends StatelessWidget {
                     padding: EdgeInsets.all(media.width * 0.017),
                     width: media.width * 0.0533,
                     height: media.height * 0.04,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
@@ -160,7 +160,7 @@ class YourStoryView extends StatelessWidget {
                         colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
                       ),
                     ),
-                    child: ImageIcon(
+                    child: const ImageIcon(
                       AssetImage("assets/images/Send_icons.png"),
                       color: Colors.white,
                     ),
