@@ -11,8 +11,8 @@ class Search_Screen extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: media.height * 0.1,
-        horizontal: media.width * 0.08,
+        vertical: media.height * 0.01,
+        horizontal: media.width * 0.03,
       ),
       child: ListView.builder(
           itemCount: 1,
