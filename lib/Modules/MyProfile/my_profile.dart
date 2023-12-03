@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/Registeration/log_in.dart';
 
 
 class Myprofile extends StatefulWidget {
@@ -132,18 +133,23 @@ class _MyprofileState extends State<Myprofile> with SingleTickerProviderStateMix
                   )
                 ],
               ),
-              Container(
-                alignment: Alignment.center,
-                width: 133,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: const Color(0xffF0C11A),width: 1.3)
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushReplacementNamed(context, LogIn.routename);
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  width: 133,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: const Color(0xffF0C11A),width: 1.3)
+                  ),
+                  child: const Text("Logout",style:  TextStyle(
+                      color: Color(0xffEB4E2A),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500),),
                 ),
-                child: const Text("Logout",style:  TextStyle(
-                    color: Color(0xffEB4E2A),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),),
               )
             ],
           ),

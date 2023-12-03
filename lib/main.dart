@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/Comment_Page/comment_page.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
 import 'package:voxiall/Modules/HomeLayout/home_layout.dart';
 import 'package:voxiall/Modules/Messages/message_screen.dart';
@@ -30,6 +31,7 @@ class MyApplication extends StatelessWidget {
         SignUp.routeName:(context)=>const SignUp(),
         HomeLayout.routeName:(context) =>const HomeLayout(),
         MessageScreen.routeName:(context) =>const MessageScreen(),
+        Comment_Page.routename : (context) => const Comment_Page(),
       },
     );
   }
