@@ -113,7 +113,7 @@ class MessageScreen extends StatelessWidget {
                 SizedBox(
                   height: media.height * 0.01,
                 ),
-                SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
