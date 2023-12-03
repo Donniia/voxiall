@@ -42,9 +42,19 @@ class YourStoryView extends StatelessWidget {
             onVerticalSwipeComplete: (direction) {
               if (direction == Direction.down) Navigator.pop(context);
             },
-            onComplete: () {
-              Navigator.pop(context);
-            },
+            // onComplete: () {
+            //   controller.pause();
+            //   //controller.;
+            //   controller.play();
+            //   Navigator.pop(context);
+            // },
+            // onStoryShow: (s){
+            //   if (s==0){
+            //     controller.pause();
+            //     //controller.reset();
+            //     //controller.play(storyItems: );
+            //   }
+            // },
           ),
           Positioned(
             top: media.height * 0.06,

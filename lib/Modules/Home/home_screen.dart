@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MessageScreen()),
+                        MaterialPageRoute(builder: (context) => const MessageScreen()),
                       );
                     },
                     child: Container(
@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
@@ -134,7 +134,7 @@ class HomeScreen extends StatelessWidget {
                 post:
                 "If you think you too small to make \n a difference, try sleeping with a mosquito. \n \n ~ Dalai Lama",
               ),
-              SliderPost(
+              const SliderPost(
                 username: "thv",
                 profilepath: "assets/images/V_profile.png",
                 path1: "assets/images/V_post.png",
