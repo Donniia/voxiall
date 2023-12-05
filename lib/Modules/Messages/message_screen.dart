@@ -9,7 +9,6 @@ class MessageScreen extends StatelessWidget {
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter);
   static const String routeName = "Message_screen";
-
   const MessageScreen({super.key});
 
   @override

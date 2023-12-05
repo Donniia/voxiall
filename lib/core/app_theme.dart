@@ -6,7 +6,6 @@ class AppTheme {
     scaffoldBackgroundColor: Colors.black,
     bottomNavigationBarTheme:const BottomNavigationBarThemeData(
       elevation: 0,
-
       backgroundColor: Colors.black,
       showUnselectedLabels: false,
       showSelectedLabels: false,
