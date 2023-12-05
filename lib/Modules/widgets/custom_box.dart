@@ -12,8 +12,8 @@ class CustomBox extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.symmetric(vertical: media.height * 0.015),
-      width: media.width * 0.37,
-      height: media.height * 0.065,
+      width: media.width * 0.40,
+      height: media.height * 0.025,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
       ),
@@ -33,7 +33,7 @@ class CustomBox extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(color: const Color(0xff727477), fontSize: media.width * 0.047),
+            style: TextStyle(color: const Color(0xff727477), fontSize: media.width * 0.040),
           )
         ],
       ),

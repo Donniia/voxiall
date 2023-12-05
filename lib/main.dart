@@ -6,8 +6,6 @@ import 'package:voxiall/Modules/Messages/message_screen.dart';
 import 'package:voxiall/Modules/Registeration/Sign_Up.dart';
 import 'package:voxiall/Modules/Registeration/log_in.dart';
 import 'package:voxiall/Modules/Splash.dart';
-
-
 import 'package:voxiall/core/app_theme.dart';
 
 
@@ -31,7 +29,6 @@ class MyApplication extends StatelessWidget {
         SignUp.routeName:(context)=>const SignUp(),
         HomeLayout.routeName:(context) =>const HomeLayout(),
         MessageScreen.routeName:(context) =>const MessageScreen(),
-        Comment_Page.routename : (context) => const Comment_Page(),
       },
     );
   }
