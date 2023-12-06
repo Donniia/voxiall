@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/AlertScreen/alerts_screen.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
-import 'package:voxiall/Modules/MyProfile/my_profile.dart';
 import 'package:voxiall/Modules/Post/create_post.dart';
 import 'package:voxiall/Modules/Search/search_screen.dart';
+
+import '../MyProfile/my_profile.dart';
+
+
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
@@ -21,7 +24,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     const Search_Screen(),
     const Create_post(),
     const AlertsScreen(),
-    const Myprofile(),
+    MyProfile(),
   ];
 
   @override
@@ -101,16 +104,16 @@ class _HomeLayoutState extends State<HomeLayout> {
     );
   }
 
-  void showBottomSheet() {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => Container(),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(25),
-          topRight: Radius.circular(25),
-        ),
-      ),
-    );
-  }
+  // void showBottomSheet() {
+  //   showModalBottomSheet(
+  //     context: context,
+  //     builder: (context) => Container(),
+  //     shape: const RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.only(
+  //         topLeft: Radius.circular(25),
+  //         topRight: Radius.circular(25),
+  //       ),
+  //     ),
+  //   );
+  // }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/Chat/chat_view.dart';
 
 class Chat_user extends StatelessWidget {
   String mess_user_img;
@@ -16,33 +17,39 @@ class Chat_user extends StatelessWidget {
         SizedBox(
           height: media.height * 0.02,
         ),
-        Row(
-          children: [
-            CircleAvatar(
-              child: Image.asset(mess_user_img),
-              maxRadius: media.width * 0.08,
-            ),
-            SizedBox(
-              width: media.width * 0.02,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(name_user,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: media.width * 0.045,
-                    )),
-                Text(
-                  text_user,
-                  style: TextStyle(color: Colors.white, fontSize: media.width * 0.035),
-                ),
-              ],
-            ),
-            const Spacer(),
-            const Text("4h ago",style: TextStyle(color: Color(0xff727477),fontSize: 14),)
-          ],
+        GestureDetector(
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatView(profilePath: mess_user_img, profileName: name_user)));
+          },
+          child: Row(
+            children: [
+              CircleAvatar(
+                backgroundColor: Colors.transparent,
+                child: Image.asset(mess_user_img),
+                maxRadius: media.width * 0.08,
+              ),
+              SizedBox(
+                width: media.width * 0.02,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(name_user,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: media.width * 0.045,
+                      )),
+                  Text(
+                    text_user,
+                    style: TextStyle(color: Colors.white, fontSize: media.width * 0.035),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              const Text("4h ago",style: TextStyle(color: Color(0xff727477),fontSize: 14),)
+            ],
+          ),
         ),
         SizedBox(
           height: media.height * 0.02,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/CommentScreens/post_comments.dart';
 import 'package:voxiall/Modules/widgets/post_footer.dart';
 import 'package:voxiall/Modules/widgets/post_header.dart';
 
@@ -26,14 +27,19 @@ class Post extends StatelessWidget {
             title: username,
             imgPath: profilepath,
           ),
-          Container(
-            padding: EdgeInsets.symmetric(
-              horizontal: screenWidth >= 600 ? 40 : 20,
-              vertical: 25,
-            ),
-            child: Text(
-              post,
-              style: const TextStyle(color: Colors.white, fontSize: 22),
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> PostComment(username: username, profilepath: profilepath, post: post)));
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: screenWidth >= 600 ? 40 : 20,
+                vertical: 25,
+              ),
+              child: Text(
+                post,
+                style: const TextStyle(color: Colors.white, fontSize: 20),
+              ),
             ),
           ),
           PostFooter(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/CommentScreens/slider_comments.dart';
 import 'package:voxiall/Modules/widgets/post_footer.dart';
 import 'package:voxiall/Modules/widgets/post_header.dart';
 
@@ -29,13 +30,18 @@ class SliderPost extends StatelessWidget {
             title: username,
             imgPath: profilepath,
           ),
-          SizedBox(
-            height: containerHeight,
-            child: PageView(
-              children: [
-                Image(image: AssetImage(path1)),
-                Image(image: AssetImage(path2)),
-              ],
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> SliderComments(username: username, profilepath: profilepath, path1: path1, path2: path2)));
+            },
+            child: SizedBox(
+              height: containerHeight,
+              child: PageView(
+                children: [
+                  Image(image: AssetImage(path1)),
+                  Image(image: AssetImage(path2)),
+                ],
+              ),
             ),
           ),
           PostFooter(),

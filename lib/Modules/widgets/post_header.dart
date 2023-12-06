@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/Profiles/profiles.dart';
 
 class PostHeader extends StatelessWidget {
   String title;
@@ -15,13 +16,25 @@ class PostHeader extends StatelessWidget {
 
     return Row(
       children: [
-        Container(
-          width: media.width * 0.133,
-          height: media.width * 0.133,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
-            image: DecorationImage(
-              image: AssetImage(imgPath),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Profiles(
+                          profileImg: imgPath,
+                          UserName: title,
+                          coverImg: "assets/images/coverImage.jpg",
+                        )));
+          },
+          child: Container(
+            width: media.width * 0.133,
+            height: media.width * 0.133,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
+              image: DecorationImage(
+                image: AssetImage(imgPath),
+              ),
             ),
           ),
         ),

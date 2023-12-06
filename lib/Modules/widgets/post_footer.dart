@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voxiall/Modules/Comment_Page/comment_page.dart';
+
 
 class PostFooter extends StatefulWidget {
   @override
@@ -53,29 +53,24 @@ class _PostFooterState extends State<PostFooter> {
               ],
             ),
             const SizedBox(width: 15),
-            GestureDetector(
-              onTap: (){
-                Navigator.pushReplacementNamed(context, Comment_Page.routename);
-              },
-              child: Row(
-                children: [
-                  const ImageIcon(
-                    AssetImage("assets/images/Comment_icon.png"),
+            Row(
+              children: [
+                const ImageIcon(
+                  AssetImage("assets/images/Comment_icon.png"),
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: media.width * 0.012,
+                ),
+                Text(
+                  "2,245",
+                  style: TextStyle(
                     color: Colors.white,
+                    fontSize: media.width * 0.037,
+                    fontWeight: FontWeight.w500,
                   ),
-                  SizedBox(
-                    width: media.width * 0.012,
-                  ),
-                  Text(
-                    "2,245",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: media.width * 0.037,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
             const SizedBox(width: 15),
             Row(

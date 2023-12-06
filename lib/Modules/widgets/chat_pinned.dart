@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voxiall/Modules/Chat/chat_view.dart';
 
 class Chat_pinned extends StatelessWidget {
   final String mass_profile;
@@ -14,9 +15,14 @@ class Chat_pinned extends StatelessWidget {
       margin: EdgeInsets.only(right: media.width * 0.07),
       child: Column(
         children: [
-          CircleAvatar(
-            backgroundImage: AssetImage(mass_profile),
-            maxRadius: media.width * 0.09,
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatView(profilePath: mass_profile, profileName:mass_name,)));
+            },
+            child: CircleAvatar(
+              backgroundImage: AssetImage(mass_profile),
+              maxRadius: media.width * 0.09,
+            ),
           ),
           SizedBox(
             height: media.height * 0.013,

@@ -11,9 +11,9 @@ class Search_Screen extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.fromLTRB(
-        media.width * 0.03,
+        media.width * 0.065,
         media.height * 0.05, // Adjust the top padding for spacing
-        media.width * 0.03,
+        media.width * 0.065,
         media.height * 0.01, // Adjust the bottom padding for spacing
       ),
       child: ListView.builder(
@@ -54,31 +54,20 @@ class Search_Screen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: media.height * 0.03,
+                height: media.height * 0.01,
               ),
               Text(
                 "Popular",
                 style: TextStyle(
-                  fontSize: media.width * 0.08,
+                  fontSize: media.width * 0.055,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.start,
               ),
-              SizedBox(height: media.height * 0.03),
+              SizedBox(height: media.height * 0.015),
           custom_tabbar(),
-              const SliderPost(
-                username: "Michelle Ogilvy",
-                profilepath: "assets/images/Profile4.png",
-                path1: "assets/images/person1.png",
-                path2: "assets/images/person1.png",
-              ),
-              const SliderPost(
-                username: "daniel radcliffe",
-                profilepath: "assets/images/potter1.png",
-                path1: "assets/images/potter.png",
-                path2: "assets/images/potter2.jpg",
-              ),
+
             ],
           );
         },
