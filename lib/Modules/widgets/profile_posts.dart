@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Home/post.dart';
 import 'package:voxiall/Modules/widgets/photo_post.dart';
 
-class ProfilePosts extends StatelessWidget {
+class MyProfilePosts extends StatelessWidget {
 
 
   @override

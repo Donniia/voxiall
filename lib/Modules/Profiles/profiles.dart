@@ -1,12 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Chat/chat_view.dart';
+import 'package:voxiall/Modules/widgets/profiles_posts.dart';
 
-class Profiles extends StatelessWidget {
+class Profiles extends StatefulWidget {
   String profileImg;
   String coverImg;
   String UserName;
   Profiles({super.key, required this.profileImg,required this.coverImg,required this.UserName});
 
+  @override
+  State<Profiles> createState() => _ProfilesState();
+}
+
+class _ProfilesState extends State<Profiles> with SingleTickerProviderStateMixin {
+  late TabController _controller;
+  bool isTabed = false;
+  int followers = 2467;
+  @override
+  void initState(){
+    _controller = TabController(length: 4, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context).size;
@@ -23,7 +43,7 @@ class Profiles extends StatelessWidget {
                       width: mediaQuery.width,
                       height: 120,
                       child: Image.asset(
-                        coverImg,
+                        widget.coverImg,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -42,7 +62,7 @@ class Profiles extends StatelessWidget {
                           padding: const EdgeInsets.all(2.5),
                           decoration: const BoxDecoration(
                               color: Colors.black, shape: BoxShape.circle),
-                          child: Image.asset(profileImg)),
+                          child: Image.asset(widget.profileImg)),
                     )
                   ],
                 ),
@@ -53,13 +73,13 @@ class Profiles extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      UserName,
+                      widget.UserName,
                       style:const TextStyle(
                           fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white),
                     ),
                     GestureDetector(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatView(profilePath: profileImg, profileName: UserName)));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatView(profilePath: widget.profileImg, profileName: widget.UserName)));
                       },
                       child: Container(
                         padding: const EdgeInsets.all(6),
@@ -86,16 +106,16 @@ class Profiles extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Column(
+                     Column(
                       children: [
                         Text(
-                          "2,467",
-                          style: TextStyle(
+                         followers.toString(),
+                          style:const TextStyle(
                               color: Colors.white,
                               fontSize: 14,
                               fontWeight: FontWeight.w500),
                         ),
-                        Text(
+                      const  Text(
                           "Followers",
                           style: TextStyle(
                               color: Color(0xffEB4E2A),
@@ -122,21 +142,74 @@ class Profiles extends StatelessWidget {
                         )
                       ],
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 100,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: const Color(0xffEB4E2A),
-                          borderRadius: BorderRadius.circular(20),
+                    GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          if(isTabed){
+                            isTabed =false;
+                            followers--;
+                          }else{
+                            isTabed=true;
+                            followers++;
+                          }
+                        });
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 100,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(color:Color(0xffEB4E2A) ),
+                          color: isTabed? Colors.transparent: Color(0xffEB4E2A),
+                            borderRadius: BorderRadius.circular(20),
+                        ),
+                        child:  Text(isTabed? "Following":"Follow",style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500),),
                       ),
-                      child: const Text("Follow",style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),),
                     )
                   ],
                 ),
+                const SizedBox(height: 20,),
+                DefaultTabController(
+                  length: 4,
+                  child: Column(
+                    children: [
+                      TabBar(
+                          controller: _controller,
+                          unselectedLabelColor: Colors.grey,
+                          indicatorColor: const Color(0xffEB4E2A),
+                          tabs: const [
+                            Tab(
+                              text: "Posts",
+                            ),
+                            Tab(
+                              text: "Stories",
+                            ),
+                            Tab(
+                              text: "Liked",
+                            ),
+                            Tab(
+                              text: "Tagged",
+                            ),
+                          ]
+                      ),
+                      Container(
+                        width: double.maxFinite,
+                        height: mediaQuery.height*3,
+                        child: TabBarView(
+                            controller: _controller,
+                            children:  [
+                             ProfilesPosts(UserName: widget.UserName, profileImg: widget.profileImg),
+                              const  Text("Stories",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
+                              const  Text("Liked",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
+                              const   Text("Tagged",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
+                            ]),
+                      )
+                    ],
+                  ),
+                )
               ],
             );
           }),

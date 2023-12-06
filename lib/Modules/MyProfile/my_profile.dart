@@ -180,7 +180,7 @@ class _MyProfileState extends State<MyProfile> with SingleTickerProviderStateMix
                       child: TabBarView(
                           controller: _controller,
                           children:  [
-                            ProfilePosts(),
+                            MyProfilePosts(),
                             const  Text("Stories",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
                             const  Text("Liked",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
                             const   Text("Tagged",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
