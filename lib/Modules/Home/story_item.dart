@@ -49,8 +49,8 @@ class StoryItem extends StatelessWidget {
               ),
             ),
             Container(
-              padding: const EdgeInsets.all(3),
-              margin: const EdgeInsets.only(bottom: 10),
+              padding: const EdgeInsets.all(1.5),
+              margin: const EdgeInsets.only(bottom: 8),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                     begin: Alignment.topLeft,
@@ -61,7 +61,7 @@ class StoryItem extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    border: Border.all(color: const Color(0xff323436), width: 4)),
+                    border: Border.all(color: const Color(0xff323436), width: 2)),
                 child: CircleAvatar(
                   backgroundImage: AssetImage(storyprofile),
                 ),

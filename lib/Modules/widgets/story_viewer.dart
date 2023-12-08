@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
+import 'package:voxiall/Modules/Profiles/profiles.dart';
 
 class YourStoryView extends StatelessWidget {
   static final StoryController controller = StoryController();
@@ -61,27 +62,32 @@ class YourStoryView extends StatelessWidget {
             left: media.width * 0.04,
             child: Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(3),
-                  margin: const EdgeInsets.only(bottom: 10),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.topRight,
-                      colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
-                    ),
-                    borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
-                  ),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Profiles(profileImg: storyprofile, UserName: user_name)));
+                  },
                   child: Container(
+                    padding: const EdgeInsets.all(1.5),
+                    margin: const EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
-                      border: Border.all(
-                        color: const Color(0xff323436),
-                        width: media.width * 0.016,
+                      gradient: const LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.topRight,
+                        colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
                       ),
+                      borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
                     ),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(storyprofile),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(media.width * 0.133 / 2),
+                        border: Border.all(
+                          color: const Color(0xff323436),
+                          width:2,
+                        ),
+                      ),
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage(storyprofile),
+                      ),
                     ),
                   ),
                 ),

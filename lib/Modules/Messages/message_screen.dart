@@ -17,7 +17,7 @@ class MessageScreen extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-          vertical: media.height * 0.01, horizontal: media.width * 0.01),
+          vertical: media.height * 0.03, horizontal: media.width * 0.05),
       child: Scaffold(
         appBar: AppBar(
           leading: GestureDetector(
@@ -161,7 +161,19 @@ class MessageScreen extends StatelessWidget {
                 Chat_user(
                     mess_user_img: "assets/images/tony.png",
                     name_user: "Tony Monta",
-                    text_user: "How’s Alicia doing? Ask her to give m..."),
+                    text_user: "How’s Alicia doing?"),
+                Chat_user(
+                    mess_user_img: "assets/images/tony.png",
+                    name_user: "Tony Monta",
+                    text_user: "How’s Alicia doing?"),
+                Chat_user(
+                    mess_user_img: "assets/images/tony.png",
+                    name_user: "Tony Monta",
+                    text_user: "How’s Alicia doing?"),
+                Chat_user(
+                    mess_user_img: "assets/images/tony.png",
+                    name_user: "Tony Monta",
+                    text_user: "How’s Alicia doing?"),
               ],
             );
           },

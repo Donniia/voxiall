@@ -18,7 +18,7 @@ class PhotoPost extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-          horizontal: media.width * 0.075, vertical: media.height * 0.015),
+          horizontal: media.width * 0.06, vertical: media.height * 0.015),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,7 +28,7 @@ class PhotoPost extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context)=> PhotoComments(username: username, profilepath: profilepath, path1: path1)));
             },
             child: Container(
-              height: media.height * 0.28,
+              height: media.height * 0.24,
               child: ClipRRect(
                 child: Image.asset(
                   path1,

@@ -22,7 +22,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   List<Widget> screens = [
     const HomeScreen(),
     const Search_Screen(),
-    const Create_post(),
+    Create_post(),
     const AlertsScreen(),
     MyProfile(),
   ];
@@ -66,8 +66,8 @@ class _HomeLayoutState extends State<HomeLayout> {
             BottomNavigationBarItem(
               icon: Container(
                 padding: EdgeInsets.all(media.width < 600 ? 8 : 13),
-                height: media.width < 600 ? 40 : 60,
-                width: media.width < 600 ? 40 : 60,
+                height: media.width < 600 ? 55 : 60,
+                width: media.width < 600 ? 55 : 60,
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     begin: Alignment.topLeft,

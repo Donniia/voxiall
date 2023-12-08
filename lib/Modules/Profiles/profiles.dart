@@ -4,9 +4,8 @@ import 'package:voxiall/Modules/widgets/profiles_posts.dart';
 
 class Profiles extends StatefulWidget {
   String profileImg;
-  String coverImg;
   String UserName;
-  Profiles({super.key, required this.profileImg,required this.coverImg,required this.UserName});
+  Profiles({super.key, required this.profileImg,required this.UserName});
 
   @override
   State<Profiles> createState() => _ProfilesState();
@@ -43,7 +42,7 @@ class _ProfilesState extends State<Profiles> with SingleTickerProviderStateMixin
                       width: mediaQuery.width,
                       height: 120,
                       child: Image.asset(
-                        widget.coverImg,
+                       "assets/images/cover.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -82,7 +81,7 @@ class _ProfilesState extends State<Profiles> with SingleTickerProviderStateMixin
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatView(profilePath: widget.profileImg, profileName: widget.UserName)));
                       },
                       child: Container(
-                        padding: const EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(4),
                         width: mediaQuery.width*0.09,
                         height: mediaQuery.height*0.03,
                         decoration: BoxDecoration(
@@ -95,6 +94,7 @@ class _ProfilesState extends State<Profiles> with SingleTickerProviderStateMixin
                         child:const ImageIcon(
                           AssetImage("assets/images/message_icon.png"),
                           color: Color(0xffEB4E2A),
+                          size: 15,
                         ),
                       ),
                     ),

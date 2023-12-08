@@ -1,18 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
 
-class Create_post extends StatelessWidget {
+class Create_post extends StatefulWidget {
+
+  @override
+  State<Create_post> createState() => _Create_postState();
+}
+
+class _Create_postState extends State<Create_post> {
+  bool isTabed = false;
   final LinearGradient colored = const LinearGradient(
       colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter);
-
-  const Create_post({super.key});
+  final LinearGradient Nocolored = const LinearGradient(
+      colors: [
+        Color(0xff181A1C),
+        Color(0xff181A1C),
+      ],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 24),
+      padding:const EdgeInsets.only(top: 50,bottom: 5,right: 25,left: 25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -118,39 +130,59 @@ class Create_post extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 68,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.topRight,
-                          colors: [Color(0xffEB4E2A), Color(0xffF0C11A)]),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: const Text(
-                      "POST",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500),
+                  GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        if(isTabed){
+                          isTabed = false;
+                        }else{
+                          isTabed=true;
+                        }
+                      });
+                    },
+                    child: Container(
+                      width: 68,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        gradient:isTabed ? colored : Nocolored,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: const Text(
+                        "POST",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 68,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      // color: Colors.orange,
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: const Text(
-                      "STORY",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        if(isTabed){
+                          isTabed = false;
+                        }else{
+                          isTabed=true;
+                        }
+                      });
+                    },
+                    child: Container(
+                      width: 68,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        gradient: isTabed ? Nocolored : colored,
+                        // color: Colors.orange,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: const Text(
+                        "STORY",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
                   )
                 ],

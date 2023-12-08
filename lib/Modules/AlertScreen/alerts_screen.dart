@@ -10,7 +10,7 @@ class AlertsScreen extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: screenHeight * 0.01,
+        vertical: screenHeight * 0.02,
         horizontal: 10,
       ),
       child: ListView.builder(
@@ -19,9 +19,6 @@ class AlertsScreen extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(
-                height: 25,
-              ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -44,7 +41,7 @@ class AlertsScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: screenHeight * 0.04,
+                height: screenHeight * 0.02,
               ),
               const Text(
                 "Today",
@@ -68,7 +65,7 @@ class AlertsScreen extends StatelessWidget {
                 thickness: 1,
               ),
               SizedBox(
-                height: screenHeight * 0.02,
+                height: screenHeight * 0.01,
               ),
               const Text(
                 "Yesterday",

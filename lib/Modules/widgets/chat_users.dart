@@ -26,7 +26,7 @@ class Chat_user extends StatelessWidget {
               CircleAvatar(
                 backgroundColor: Colors.transparent,
                 child: Image.asset(mess_user_img),
-                maxRadius: media.width * 0.08,
+                maxRadius: media.width * 0.065,
               ),
               SizedBox(
                 width: media.width * 0.02,
@@ -37,12 +37,12 @@ class Chat_user extends StatelessWidget {
                   Text(name_user,
                       style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: media.width * 0.045,
+                        fontWeight: FontWeight.w500,
+                        fontSize: media.width * 0.035,
                       )),
                   Text(
                     text_user,
-                    style: TextStyle(color: Colors.white, fontSize: media.width * 0.035),
+                    style: TextStyle(color: Colors.white, fontSize: media.width * 0.030),
                   ),
                 ],
               ),

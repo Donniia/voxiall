@@ -11,18 +11,20 @@ class Search_Screen extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.fromLTRB(
-        media.width * 0.065,
+        media.width * 0.025,
         media.height * 0.05, // Adjust the top padding for spacing
-        media.width * 0.065,
+        media.width * 0.025,
         media.height * 0.01, // Adjust the bottom padding for spacing
       ),
       child: ListView.builder(
         itemCount: 1,
         itemBuilder: (context, index) {
           return Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
+                width: media.width*0.8,
+                height: media.height*0.05,
                 padding: EdgeInsets.only(
                   left: media.width * 0.04,
                   right: media.width * 0.05,
@@ -56,14 +58,18 @@ class Search_Screen extends StatelessWidget {
               SizedBox(
                 height: media.height * 0.01,
               ),
-              Text(
-                "Popular",
-                style: TextStyle(
-                  fontSize: media.width * 0.055,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              Container(
+                margin: EdgeInsets.only(top: media.height*0.01,bottom:media.height*0.01 ),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "Popular",
+
+                  style: TextStyle(
+                    fontSize: media.width * 0.055,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-                textAlign: TextAlign.start,
               ),
               SizedBox(height: media.height * 0.015),
           custom_tabbar(),

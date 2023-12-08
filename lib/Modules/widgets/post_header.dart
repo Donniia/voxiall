@@ -24,7 +24,6 @@ class PostHeader extends StatelessWidget {
                     builder: (context) => Profiles(
                           profileImg: imgPath,
                           UserName: title,
-                          coverImg: "assets/images/coverImage.jpg",
                         )));
           },
           child: Container(
@@ -48,7 +47,7 @@ class PostHeader extends StatelessWidget {
               title,
               style: TextStyle(
                 color: const Color(0xffECEBED),
-                fontSize: media.width * 0.048,
+                fontSize: media.width * 0.038,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -56,7 +55,7 @@ class PostHeader extends StatelessWidget {
               "1h ago",
               style: TextStyle(
                 color: const Color(0xff727477),
-                fontSize: media.width * 0.040,
+                fontSize: media.width * 0.03,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -65,8 +64,8 @@ class PostHeader extends StatelessWidget {
         const Spacer(),
         Container(
           child: Image.asset("assets/images/Dots_Vertical.png"),
-          height: media.width * 0.08,
-          width: media.width * 0.08,
+          height: media.width * 0.06,
+          width: media.width * 0.06,
         ),
       ],
     );

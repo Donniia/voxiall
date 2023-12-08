@@ -20,8 +20,9 @@ class Chat_pinned extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatView(profilePath: mass_profile, profileName:mass_name,)));
             },
             child: CircleAvatar(
+              backgroundColor: Colors.transparent,
               backgroundImage: AssetImage(mass_profile),
-              maxRadius: media.width * 0.09,
+              maxRadius: media.width * 0.07,
             ),
           ),
           SizedBox(
@@ -31,8 +32,8 @@ class Chat_pinned extends StatelessWidget {
             mass_name,
             style: TextStyle(
               color: const Color(0xffFFFFFF),
-              fontWeight: FontWeight.w800,
-              fontSize: media.width * 0.04,
+              fontWeight: FontWeight.w500,
+              fontSize: media.width * 0.03,
             ),
           )
         ],

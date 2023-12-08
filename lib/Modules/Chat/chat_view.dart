@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Messages/message_screen.dart';
+import 'package:voxiall/Modules/Profiles/profiles.dart';
 import 'package:voxiall/Modules/widgets/message_item.dart';
 
 class ChatView extends StatelessWidget {
@@ -12,7 +13,7 @@ class ChatView extends StatelessWidget {
     var media = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: media.height * 0.01,
+
         horizontal: media.width * 0.01,
       ),
       child: Scaffold(
@@ -23,12 +24,17 @@ class ChatView extends StatelessWidget {
           toolbarHeight: media.height * 0.08,
           title: Column(
             children: [
-              CircleAvatar(
-                backgroundColor: Colors.transparent,
-                backgroundImage: AssetImage(
-                  profilePath,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Profiles(profileImg: profilePath, UserName: profileName)));
+                },
+                child: CircleAvatar(
+                  backgroundColor: Colors.transparent,
+                  backgroundImage: AssetImage(
+                    profilePath,
+                  ),
+                  maxRadius: media.width * 0.06,
                 ),
-                maxRadius: media.width * 0.06,
               ),
               const SizedBox(
                 height: 4,

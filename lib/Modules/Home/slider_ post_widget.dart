@@ -20,9 +20,11 @@ class SliderPost extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double containerHeight = screenWidth >= 600 ? 320 : 220;
+    var media = MediaQuery.of(context).size;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+      padding: EdgeInsets.symmetric(
+          horizontal: media.width * 0.06, vertical: media.height * 0.015),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

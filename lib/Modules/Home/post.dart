@@ -34,11 +34,11 @@ class Post extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(
                 horizontal: screenWidth >= 600 ? 40 : 20,
-                vertical: 25,
+                vertical: 15,
               ),
               child: Text(
                 post,
-                style: const TextStyle(color: Colors.white, fontSize: 20),
+                style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
           ),

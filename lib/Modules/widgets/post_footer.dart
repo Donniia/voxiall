@@ -35,18 +35,18 @@ class _PostFooterState extends State<PostFooter> {
                     });
                   },
                   child: ImageIcon(
-                    const AssetImage("assets/images/Like_icon.png"),
+                    const AssetImage("assets/images/Like_icon.png"),size: 22,
                     color: isTabed ? const Color(0xffEB4E2A) : Colors.white,
                   ),
                 ),
                 SizedBox(
-                  width: media.width * 0.012,
+                  width: media.width * 0.005,
                 ),
                 Text(
                   likes.toString(),
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: media.width * 0.037,
+                    fontSize: media.width * 0.030,
                     fontWeight: FontWeight.w500,
                   ),
                 )
@@ -57,16 +57,17 @@ class _PostFooterState extends State<PostFooter> {
               children: [
                 const ImageIcon(
                   AssetImage("assets/images/Comment_icon.png"),
+                  size: 22,
                   color: Colors.white,
                 ),
                 SizedBox(
-                  width: media.width * 0.012,
+                  width: media.width * 0.005,
                 ),
                 Text(
                   "2,245",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: media.width * 0.037,
+                    fontSize: media.width * 0.030,
                     fontWeight: FontWeight.w500,
                   ),
                 )
@@ -78,16 +79,16 @@ class _PostFooterState extends State<PostFooter> {
                 ImageIcon(
                   const AssetImage("assets/images/share_icon.png"),
                   color: Colors.white,
-                  size: media.width * 0.046,
+                  size: 16,
                 ),
                 SizedBox(
-                  width: media.width * 0.014,
+                  width: media.width * 0.008,
                 ),
                 Text(
                   "2,245",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: media.width * 0.037,
+                    fontSize: media.width * 0.030,
                     fontWeight: FontWeight.w500,
                   ),
                 )
@@ -96,8 +97,8 @@ class _PostFooterState extends State<PostFooter> {
             const Spacer(),
             SizedBox(
               child: Image.asset("assets/images/save_icon.png"),
-              height: media.width * 0.058,
-              width: media.width * 0.058,
+              height: media.width * 0.050,
+              width: media.width * 0.050,
             ),
           ],
         ),

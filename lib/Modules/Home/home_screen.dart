@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                   const Text(
                     "  VOXIAL",
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
                     ),
@@ -50,6 +50,7 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(6),
                       width: 40,
                       height: 40,
+                      margin:const EdgeInsets.only(right: 15),
                       decoration: BoxDecoration(
                         border: Border.all(
                           color: const Color(0xff727477),
@@ -87,33 +88,34 @@ class HomeScreen extends StatelessWidget {
                     StoryItem(
                       storyprofile: "assets/images/storyprofile2.png",
                       story: "assets/images/Story3.png",
-                      UserName: '',
+                      UserName: 'Jennie',
                       time: '30m ago',
                     ),
                     StoryItem(
                       storyprofile: "assets/images/storyprofile2.png",
-                      story: "assets/images/Story5.jpg",
-                      UserName: '',
-                      time: '45m ago',
+                      story: "assets/images/Story3.png",
+                      UserName: 'Jennie',
+                      time: '30m ago',
                     ),
                     StoryItem(
                       storyprofile: "assets/images/storyprofile2.png",
-                      story: "assets/images/Story6.jpg",
-                      UserName: '',
-                      time: '2h ago',
+                      story: "assets/images/Story3.png",
+                      UserName: 'Jennie',
+                      time: '30m ago',
                     ),
                     StoryItem(
                       storyprofile: "assets/images/storyprofile2.png",
-                      story: "assets/images/Story7.jpg",
-                      UserName: '',
-                      time: '1h ago',
+                      story: "assets/images/Story3.png",
+                      UserName: 'Jennie',
+                      time: '30m ago',
                     ),
                     StoryItem(
                       storyprofile: "assets/images/storyprofile2.png",
-                      story: "assets/images/Story8.jpg",
-                      UserName: 'Rebecca',
-                      time: '1m ago',
+                      story: "assets/images/Story3.png",
+                      UserName: 'Jennie',
+                      time: '30m ago',
                     ),
+
                   ],
                 ),
               ),

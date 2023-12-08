@@ -18,7 +18,7 @@ class Alert_item extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 3),
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 3),
       child: Column(
         children: [
           Row(
@@ -66,7 +66,7 @@ class Alert_item extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: screenWidth * 0.03), // Adjust the spacing as needed
+
         ],
       ),
     );
