@@ -90,6 +90,36 @@ class AlertsScreen extends StatelessWidget {
                 text_2: "mentioned you in a post.",
                 time: "1d ago",
               ),
+              Alert_item(
+                img_path: "assets/images/mention.png",
+                text_1: "Ralph Edwards ",
+                text_2: "mentioned you in a post.",
+                time: "1d ago",
+              ),
+              Alert_item(
+                img_path: "assets/images/mention.png",
+                text_1: "Ralph Edwards ",
+                text_2: "mentioned you in a post.",
+                time: "1d ago",
+              ),
+              Alert_item(
+                img_path: "assets/images/mention.png",
+                text_1: "Ralph Edwards ",
+                text_2: "mentioned you in a post.",
+                time: "1d ago",
+              ),
+              Alert_item(
+                img_path: "assets/images/mention.png",
+                text_1: "Ralph Edwards ",
+                text_2: "mentioned you in a post.",
+                time: "1d ago",
+              ),
+              Alert_item(
+                img_path: "assets/images/mention.png",
+                text_1: "Ralph Edwards ",
+                text_2: "mentioned you in a post.",
+                time: "1d ago",
+              ),
             ],
           );
         },

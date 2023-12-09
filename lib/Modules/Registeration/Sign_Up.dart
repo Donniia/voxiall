@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/HomeLayout/home_layout.dart';
+import 'package:voxiall/Modules/Registeration/log_in.dart';
 import 'package:voxiall/Modules/widgets/custom_button.dart';
 import 'package:voxiall/Modules/widgets/custom_text_field.dart';
 import '../widgets/custom_box.dart';
@@ -20,6 +21,7 @@ class _SignUpState extends State<SignUp> {
   var formKey = GlobalKey<FormState>();
 
   bool isVisible = false;
+  bool isvisible2 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -86,17 +88,20 @@ class _SignUpState extends State<SignUp> {
                     if (value == null || value.trim().isEmpty) {
                       return "You must enter your password";
                     }
+                    if(value.length < 8){
+                      return "password must be at least 8 characters";
+                    }
                   },
                   labelText: "Password",
                 ),
                 CustomTextForm(
-                  obsecure: !isVisible,
+                  obsecure: !isvisible2,
                   suffixicon: GestureDetector(
                     onTap: () {
-                      isVisible = !isVisible;
+                      isvisible2 = !isvisible2;
                       setState(() {});
                     },
-                    child: isVisible == true
+                    child: isvisible2 == true
                         ? const Icon(Icons.visibility, color: Color(0xff727477))
                         : const Icon(Icons.visibility_off, color: Color(0xff727477)),
                   ),
@@ -104,7 +109,7 @@ class _SignUpState extends State<SignUp> {
                     if (value == null || value.trim().isEmpty) {
                       return "You must confirm your password";
                     }
-                    if (value == passController.text) {
+                    if (value !=  passController.text) {
                       return "password doesn't match";
                     }
                   },
@@ -122,7 +127,7 @@ class _SignUpState extends State<SignUp> {
                 GestureDetector(
                   onTap: () {
                     if (formKey.currentState!.validate()) {
-                      Navigator.pushNamed(context, HomeLayout.routeName);
+                      Navigator.push(context, MaterialPageRoute(builder: (contex)=>LogIn()));
                     }
                   },
                   child: CustomButton(title: "SignUp"),

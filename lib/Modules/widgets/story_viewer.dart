@@ -92,9 +92,10 @@ class YourStoryView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: media.width * 0.0085,
+                  width: media.width * 0.0095,
                 ),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       user_name,
@@ -120,59 +121,51 @@ class YourStoryView extends StatelessWidget {
             ),
           ),
           Container(
+            alignment: Alignment.center,
+            margin:const EdgeInsets.only(bottom: 20),
             padding: EdgeInsets.symmetric(
-              vertical: media.height * 0.0267,
-              horizontal: media.width * 0.0427,
+              horizontal: media.width * 0.035,
             ),
-            width: media.width * 0.94,
-            height: media.height * 0.1296,
-            color: Colors.black.withOpacity(0.3),
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                vertical: media.height * 0.015,
-                horizontal: media.width * 0.028,
-              ),
-              width: media.width * 0.33,
-              height: media.height * 0.072,
-              decoration: BoxDecoration(
-                color: const Color(0xff323436),
-                borderRadius: BorderRadius.circular(media.height * 0.036),
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      style: const TextStyle(color: Colors.white),
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Type your reply here..",
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: media.width * 0.02,
-                          color: const Color(0xffECEBED),
-                        ),
+            width: media.width * 0.9,
+            height: media.height * 0.060,
+            decoration: BoxDecoration(
+              color: const Color(0xff323436),
+              borderRadius: BorderRadius.circular(media.height * 0.036),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    style: const TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Type your reply here..",
+                      hintStyle: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: media.width * 0.030,
+                        color: const Color(0xffECEBED),
                       ),
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.all(media.width * 0.017),
-                    width: media.width * 0.0533,
-                    height: media.height * 0.04,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.topRight,
-                        colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
-                      ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(media.width * 0.017),
+                  width: media.width * 0.0533,
+                  height: media.height * 0.04,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.topRight,
+                      colors: [Color(0xffEB4E2A), Color(0xffF0C11A)],
                     ),
-                    child: const ImageIcon(
-                      AssetImage("assets/images/Send_icons.png"),
-                      color: Colors.white,
-                    ),
-                  )
-                ],
-              ),
+                  ),
+                  child: const ImageIcon(
+                    AssetImage("assets/images/Send_icons.png"),
+                    color: Colors.white,
+                  ),
+                )
+              ],
             ),
           ),
         ],
