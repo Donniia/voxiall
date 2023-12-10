@@ -48,13 +48,13 @@ class AlertsScreen extends StatelessWidget {
                 style: TextStyle(color: Color(0xff727477), fontSize: 18),
                 textAlign: TextAlign.start,
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/Framelike.png",
                 text_1: "Sofia, John and +19 others ",
                 text_2: "liked your post.",
                 time: "10m ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/Framelike.png",
                 text_1: "Rebecca, Daisy and +11 other ",
                 text_2: "liked your post.",
@@ -72,49 +72,49 @@ class AlertsScreen extends StatelessWidget {
                 style: TextStyle(color: Color(0xff727477), fontSize: 18),
                 textAlign: TextAlign.start,
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/comment_alert.png",
                 text_1: "Katrina, Denver and +2 others ",
                 text_2: "commented on \n your post.",
                 time: "1d ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/brithday.png",
                 text_1: "Savannah Wilson is ",
                 text_2: "celebrating birthday today. \n Drop a wish! 🎉",
                 time: "1d ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/mention.png",
                 text_1: "Ralph Edwards ",
                 text_2: "mentioned you in a post.",
                 time: "1d ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/mention.png",
                 text_1: "Ralph Edwards ",
                 text_2: "mentioned you in a post.",
                 time: "1d ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/mention.png",
                 text_1: "Ralph Edwards ",
                 text_2: "mentioned you in a post.",
                 time: "1d ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/mention.png",
                 text_1: "Ralph Edwards ",
                 text_2: "mentioned you in a post.",
                 time: "1d ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/mention.png",
                 text_1: "Ralph Edwards ",
                 text_2: "mentioned you in a post.",
                 time: "1d ago",
               ),
-              Alert_item(
+              const Alert_item(
                 img_path: "assets/images/mention.png",
                 text_1: "Ralph Edwards ",
                 text_2: "mentioned you in a post.",

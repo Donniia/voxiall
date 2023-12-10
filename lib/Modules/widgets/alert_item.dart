@@ -6,7 +6,7 @@ class Alert_item extends StatelessWidget {
   final String text_2;
   final String time;
 
-  Alert_item({
+  const Alert_item({super.key, 
     required this.img_path,
     required this.text_1,
     required this.text_2,

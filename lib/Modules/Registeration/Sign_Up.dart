@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:voxiall/Modules/HomeLayout/home_layout.dart';
 import 'package:voxiall/Modules/Registeration/log_in.dart';
 import 'package:voxiall/Modules/widgets/custom_button.dart';
 import 'package:voxiall/Modules/widgets/custom_text_field.dart';
@@ -57,6 +56,7 @@ class _SignUpState extends State<SignUp> {
                     if (value == null || value.trim().isEmpty) {
                       return "You must enter your full name";
                     }
+                    return null;
                   },
                   labelText: "Full Name",
                 ),
@@ -69,6 +69,7 @@ class _SignUpState extends State<SignUp> {
                     if (!regex.hasMatch(value)) {
                       return "invalid email address";
                     }
+                    return null;
                   },
                   labelText: "Email",
                 ),
@@ -91,6 +92,7 @@ class _SignUpState extends State<SignUp> {
                     if(value.length < 8){
                       return "password must be at least 8 characters";
                     }
+                    return null;
                   },
                   labelText: "Password",
                 ),
@@ -112,6 +114,7 @@ class _SignUpState extends State<SignUp> {
                     if (value !=  passController.text) {
                       return "password doesn't match";
                     }
+                    return null;
                   },
                   labelText: "Confirm Password",
                 ),
@@ -120,6 +123,7 @@ class _SignUpState extends State<SignUp> {
                     if (value == null || value.trim().isEmpty) {
                       return "You must enter your phone number";
                     }
+                    return null;
                   },
                   labelText: "Phone Number",
                 ),
@@ -127,7 +131,7 @@ class _SignUpState extends State<SignUp> {
                 GestureDetector(
                   onTap: () {
                     if (formKey.currentState!.validate()) {
-                      Navigator.push(context, MaterialPageRoute(builder: (contex)=>LogIn()));
+                      Navigator.push(context, MaterialPageRoute(builder: (contex)=>const LogIn()));
                     }
                   },
                   child: CustomButton(title: "SignUp"),

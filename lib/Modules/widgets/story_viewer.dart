@@ -8,7 +8,7 @@ class YourStoryView extends StatelessWidget {
   String story;
   String user_name;
   String time;
-  YourStoryView({
+  YourStoryView({super.key, 
     required this.story,
     required this.storyprofile,
     required this.user_name,

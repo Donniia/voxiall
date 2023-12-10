@@ -60,10 +60,11 @@ class _LogInState extends State<LogIn> {
                       if (value == null || value.trim().isEmpty) {
                         return "You must enter your email address";
                       }
-                      var regex = RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+                      var regex = RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
                       if (!regex.hasMatch(value)) {
                         return "invalid email address";
                       }
+                      return null;
                     },
                   ),
                   CustomTextForm(
@@ -91,6 +92,7 @@ class _LogInState extends State<LogIn> {
                       if(value.length < 8){
                         return "password must be at least 8 characters";
                       }
+                      return null;
                     },
                   ),
                   GestureDetector(

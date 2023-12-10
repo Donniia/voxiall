@@ -12,7 +12,7 @@ class Splash extends StatelessWidget {
     var media = MediaQuery.of(context).size;
 
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, LogIn.routename);
+      Navigator.push(context, MaterialPageRoute(builder:(context)=>const LogIn()));
     });
 
     return Scaffold(

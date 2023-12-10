@@ -62,10 +62,10 @@ class PostHeader extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Container(
-          child: Image.asset("assets/images/Dots_Vertical.png"),
+        SizedBox(
           height: media.width * 0.06,
           width: media.width * 0.06,
+          child: Image.asset("assets/images/Dots_Vertical.png"),
         ),
       ],
     );

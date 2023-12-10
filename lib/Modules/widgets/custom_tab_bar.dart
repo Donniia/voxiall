@@ -4,6 +4,8 @@ import 'package:voxiall/Modules/widgets/all_tab.dart';
 import 'package:voxiall/Modules/widgets/tab_item.dart';
 
 class custom_tabbar extends StatefulWidget {
+  const custom_tabbar({super.key});
+
   @override
   State<custom_tabbar> createState() => _custom_tabbarState();
 }
@@ -45,7 +47,7 @@ class _custom_tabbarState extends State<custom_tabbar>  with SingleTickerProvide
             labelPadding: EdgeInsets.symmetric(
               horizontal: media.width * 0.03,
             ),
-            tabs: [
+            tabs: const [
               Tab_Item(tabTitle: "All",),
               Tab_Item(tabTitle: "Profiles",),
               Tab_Item(tabTitle: "Photos",),
@@ -55,7 +57,7 @@ class _custom_tabbarState extends State<custom_tabbar>  with SingleTickerProvide
               Tab_Item(tabTitle: "Tags",),
             ],
           ),
-          Container(
+          SizedBox(
               width: double.maxFinite,
               height: media.height*2,
             child: TabBarView(

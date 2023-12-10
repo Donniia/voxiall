@@ -21,10 +21,10 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   List<Widget> screens = [
     const HomeScreen(),
-    const Search_Screen(),
-    Create_post(),
+    Search_Screen(),
+    const Create_post(),
     const AlertsScreen(),
-    MyProfile(),
+    const MyProfile(),
   ];
 
   @override

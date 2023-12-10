@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:voxiall/Modules/Home/slider_%20post_widget.dart';
 import 'package:voxiall/Modules/widgets/custom_tab_bar.dart';
 
 class Search_Screen extends StatelessWidget {
-  const Search_Screen({Key? key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +71,7 @@ class Search_Screen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: media.height * 0.015),
-          custom_tabbar(),
+          const custom_tabbar(),
 
             ],
           );

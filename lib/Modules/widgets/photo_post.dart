@@ -10,7 +10,7 @@ class PhotoPost extends StatelessWidget {
   String path1;
 
   PhotoPost(
-      {required this.username, required this.profilepath, required this.path1});
+      {super.key, required this.username, required this.profilepath, required this.path1});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class PhotoPost extends StatelessWidget {
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=> PhotoComments(username: username, profilepath: profilepath, path1: path1)));
             },
-            child: Container(
+            child: SizedBox(
               height: media.height * 0.24,
               child: ClipRRect(
                 child: Image.asset(
@@ -36,7 +36,7 @@ class PhotoPost extends StatelessWidget {
               ),
             ),
           ),
-          PostFooter(),
+          const PostFooter(),
         ],
       ),
     );

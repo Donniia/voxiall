@@ -6,7 +6,7 @@ class Chat_user extends StatelessWidget {
   String name_user;
   String text_user;
 
-  Chat_user({Key? key,required this.mess_user_img,required this.name_user,required this.text_user});
+  Chat_user({super.key,required this.mess_user_img,required this.name_user,required this.text_user});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +25,8 @@ class Chat_user extends StatelessWidget {
             children: [
               CircleAvatar(
                 backgroundColor: Colors.transparent,
-                child: Image.asset(mess_user_img),
                 maxRadius: media.width * 0.065,
+                child: Image.asset(mess_user_img),
               ),
               SizedBox(
                 width: media.width * 0.02,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Tab_Item extends StatefulWidget {
   final String tabTitle;
 
-  Tab_Item({required this.tabTitle,});
+  const Tab_Item({super.key, required this.tabTitle,});
 
   @override
   State<Tab_Item> createState() => _Tab_ItemState();

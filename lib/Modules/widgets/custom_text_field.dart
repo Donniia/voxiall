@@ -8,7 +8,7 @@ class CustomTextForm extends StatelessWidget {
   Widget? suffixicon;
   bool obsecure;
 
-  CustomTextForm({
+  CustomTextForm({super.key, 
     this.textcontroller,
     this.suffixicon,
     this.validator,
@@ -36,7 +36,7 @@ class CustomTextForm extends StatelessWidget {
           label: Text(
             labelText,
             style: const TextStyle(
-              color: const Color(0xff727477),
+              color: Color(0xff727477),
             ),
           ),
           labelStyle: TextStyle(color: theme.colorScheme.onSecondary),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class PostFooter extends StatefulWidget {
+  const PostFooter({super.key});
+
   @override
   State<PostFooter> createState() => _PostFooterState();
 }
@@ -76,8 +78,8 @@ class _PostFooterState extends State<PostFooter> {
             const SizedBox(width: 15),
             Row(
               children: [
-                ImageIcon(
-                  const AssetImage("assets/images/share_icon.png"),
+                const ImageIcon(
+                   AssetImage("assets/images/share_icon.png"),
                   color: Colors.white,
                   size: 16,
                 ),
@@ -96,9 +98,9 @@ class _PostFooterState extends State<PostFooter> {
             ),
             const Spacer(),
             SizedBox(
-              child: Image.asset("assets/images/save_icon.png"),
               height: media.width * 0.050,
               width: media.width * 0.050,
+              child: Image.asset("assets/images/save_icon.png"),
             ),
           ],
         ),

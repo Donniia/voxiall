@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:voxiall/Modules/Home/home_screen.dart';
 
 class Create_post extends StatefulWidget {
+  const Create_post({super.key});
+
 
   @override
   State<Create_post> createState() => _Create_postState();

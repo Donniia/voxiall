@@ -159,11 +159,11 @@ class _ProfilesState extends State<Profiles> with SingleTickerProviderStateMixin
                         width: 100,
                         height: 40,
                         decoration: BoxDecoration(
-                          border: Border.all(color:Color(0xffEB4E2A) ),
-                          color: isTabed? Colors.transparent: Color(0xffEB4E2A),
+                          border: Border.all(color:const Color(0xffEB4E2A) ),
+                          color: isTabed? Colors.transparent: const Color(0xffEB4E2A),
                             borderRadius: BorderRadius.circular(20),
                         ),
-                        child:  Text(isTabed? "Following":"Follow",style: TextStyle(
+                        child:  Text(isTabed? "Following":"Follow",style: const TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w500),),
@@ -195,7 +195,7 @@ class _ProfilesState extends State<Profiles> with SingleTickerProviderStateMixin
                             ),
                           ]
                       ),
-                      Container(
+                      SizedBox(
                         width: double.maxFinite,
                         height: mediaQuery.height*3,
                         child: TabBarView(

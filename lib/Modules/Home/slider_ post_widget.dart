@@ -46,7 +46,7 @@ class SliderPost extends StatelessWidget {
               ),
             ),
           ),
-          PostFooter(),
+          const PostFooter(),
         ],
       ),
     );

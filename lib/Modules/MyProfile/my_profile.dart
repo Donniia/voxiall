@@ -4,6 +4,8 @@ import 'package:voxiall/Modules/widgets/profile_posts.dart';
 
 
 class MyProfile extends StatefulWidget {
+  const MyProfile({super.key});
+
 
 
   @override
@@ -174,16 +176,16 @@ class _MyProfileState extends State<MyProfile> with SingleTickerProviderStateMix
                           ),
                         ]
                     ),
-                    Container(
+                    SizedBox(
                       width: double.maxFinite,
                       height: mediaQuery.height*3,
                       child: TabBarView(
                           controller: _controller,
-                          children:  [
+                          children:  const [
                             MyProfilePosts(),
-                            const  Text("Stories",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
-                            const  Text("Liked",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
-                            const   Text("Tagged",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
+                            Text("Stories",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
+                            Text("Liked",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
+                            Text("Tagged",style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
                           ]),
                     )
                   ],

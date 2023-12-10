@@ -93,7 +93,7 @@ class PostComment extends StatelessWidget {
            child: ListView.builder(
              itemCount: 1,
                itemBuilder: (context,index){
-             return Column(
+             return const Column(
                children: [
                  CommentItem(
                      imgpath: "assets/images/Jessica_Thompson1.png",
@@ -168,7 +168,7 @@ class PostComment extends StatelessWidget {
                             ),
                           ),
                         )),
-                    Icon(Icons.add,color: Color(0xff727477),),
+                    const Icon(Icons.add,color: Color(0xff727477),),
                     Container(
                       padding: EdgeInsets.all(media.width * 0.01),
                       width: media.width * 0.09,

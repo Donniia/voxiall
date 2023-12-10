@@ -5,7 +5,7 @@ class CommentItem extends StatefulWidget {
   final String username;
   final String comment;
 
-   CommentItem({super.key, required this.imgpath, required this.username, required this.comment});
+   const CommentItem({super.key, required this.imgpath, required this.username, required this.comment});
 
   @override
   State<CommentItem> createState() => _CommentItemState();
@@ -61,7 +61,7 @@ class _CommentItemState extends State<CommentItem> {
             },
             child: ImageIcon(
                 const AssetImage("assets/images/Like_icon.png"),
-                color: isTabed ? const Color(0xffEB4E2A) : Color(0xff727477)
+                color: isTabed ? const Color(0xffEB4E2A) : const Color(0xff727477)
             ),
           ),
         ],

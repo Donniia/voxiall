@@ -3,6 +3,8 @@ import 'package:voxiall/Modules/Home/post.dart';
 import 'package:voxiall/Modules/widgets/photo_post.dart';
 
 class MyProfilePosts extends StatelessWidget {
+  const MyProfilePosts({super.key});
+
 
 
   @override

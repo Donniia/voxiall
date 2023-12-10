@@ -42,7 +42,7 @@ class Post extends StatelessWidget {
               ),
             ),
           ),
-          PostFooter(),
+          const PostFooter(),
         ],
       ),
     );

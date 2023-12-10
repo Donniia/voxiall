@@ -4,7 +4,7 @@ class CustomBox extends StatelessWidget {
   String imgPath;
   String title;
 
-  CustomBox({Key? key, required this.title, required this.imgPath});
+  CustomBox({super.key, required this.title, required this.imgPath});
 
   @override
   Widget build(BuildContext context) {
