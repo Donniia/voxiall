@@ -1,6 +1,7 @@
 # voxiall
 
-A new Flutter project.
+A Flutter project that was an assignment i was required to do at my college.
+You can tell that it looks like instagram app, it includes a number of screens and all data is static , no backend or dynamic data
 
 ## Getting Started
 
