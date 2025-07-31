@@ -7,16 +7,16 @@ A Flutter project that was an assignment i was required to do at my college. You
 Here are some screenshots for the application:
 
 <p>
-<img src="assets/screenShots/v1.png"  width="200">
-<img src="assets/screenShots/v2.png"  width="200">
-<img src="assets/screenShots/v3.png"  width="200">
-<img src="assets/screenShots/v4.png"  width="200">
-<img src="assets/screenShots/v5.png"  width="200">
-<img src="assets/screenShots/v6.png"  width="200">
-<img src="assets/screenShots/v7.png"  width="200">
-<img src="assets/screenShots/v8.png"  width="200">
-<img src="assets/screenShots/v9.png"  width="200">
-<img src="assets/screenShots/v10.png"  width="200">
+<img src="assets/screenShots/v1.jpg"  width="200">
+<img src="assets/screenShots/v2.jpg"  width="200">
+<img src="assets/screenShots/v3.jpg"  width="200">
+<img src="assets/screenShots/v4.jpg"  width="200">
+<img src="assets/screenShots/v5.jpg"  width="200">
+<img src="assets/screenShots/v6.jpg"  width="200">
+<img src="assets/screenShots/v7.jpg"  width="200">
+<img src="assets/screenShots/v8.jpg"  width="200">
+<img src="assets/screenShots/v9.jpg"  width="200">
+<img src="assets/screenShots/v10.jpg" width="200">
 </p>
 
 ### 📽️ Demo Video
