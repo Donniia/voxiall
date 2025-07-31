@@ -1,16 +1,24 @@
 # voxiall
 
-A new Flutter project.
+A Flutter project that was an assignment i was required to do at my college. You can tell that it looks like instagram app, it includes a number of screens and all data is static , no backend or dynamic data
 
-## Getting Started
+## App ScreenShots
 
-This project is a starting point for a Flutter application.
+Here are some screenshots for the application:
 
-A few resources to get you started if this is your first Flutter project:
+<p>
+<img src="assets/screenShots/v1.png"  width="200">
+<img src="assets/screenShots/v2.png"  width="200">
+<img src="assets/screenShots/v3.png"  width="200">
+<img src="assets/screenShots/v4.png"  width="200">
+<img src="assets/screenShots/v5.png"  width="200">
+<img src="assets/screenShots/v6.png"  width="200">
+<img src="assets/screenShots/v7.png"  width="200">
+<img src="assets/screenShots/v8.png"  width="200">
+<img src="assets/screenShots/v9.png"  width="200">
+<img src="assets/screenShots/v10.png"  width="200">
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 📽️ Demo Video
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[▶️ Watch the video](https://drive.google.com/file/d/1dJe2GeB_75557axh-BE5MTdO5pP8yDDd/view?usp=drive_link)
